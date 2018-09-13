@@ -16,4 +16,4 @@ MonoBehaviour:
   frictionMultiplier: 0.5
   isDestructable: 1
   isPhysical: 1
-  matterMaterial: {fileID: 2100000, guid: 8ba392dd078919d4996767a55784fc00, type: 2}
+  matterMaterial: {fileID: 2100000, guid: 2fc2c31276f37d344b84fbd5fb35408a, type: 2}
