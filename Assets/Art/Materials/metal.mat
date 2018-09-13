@@ -55,7 +55,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleCubemap_5FC84C74_Cube:
-        m_Texture: {fileID: 8900000, guid: 9180b78d12227a44f920a537c6cd1ef9, type: 3}
+        m_Texture: {fileID: 8900000, guid: 178f43404d5b1fe438e198cdb853b9fc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
