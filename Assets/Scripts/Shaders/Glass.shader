@@ -30,7 +30,8 @@
 #pragma surface surf BlinnPhong alpha
 
 		// Access the Shaderlab properties
-		sampler2D _MainTex;
+
+	sampler2D _MainTex;
 	sampler2D _SpecularMap;
 	samplerCUBE _Cube;
 	fixed4 _ReflectColour;
