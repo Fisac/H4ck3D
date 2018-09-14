@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: 
   name: Default
-  mass: 1
+  density: 1
   frictionMultiplier: 1
   isDestructable: 0
   isPhysical: 1

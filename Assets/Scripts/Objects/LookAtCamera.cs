@@ -12,6 +12,7 @@ public class LookAtCamera : MonoBehaviour {
     public Transform boxTransform;
 
     GameObject canvasHolder;
+    public Text popupName;
     public Text popupMatter;
 
     // Use this for initialization
@@ -37,5 +38,6 @@ public class LookAtCamera : MonoBehaviour {
     void UpdateText()
     {
         popupMatter.text = interactableObject.matter.name;
+        popupName.text = interactableObject.thisGameObject.name;
     }
 }

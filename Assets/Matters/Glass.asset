@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Glass
   m_EditorClassIdentifier: 
   name: Glass
-  mass: 1
+  density: 1
   frictionMultiplier: 0.5
   isDestructable: 1
   isPhysical: 1

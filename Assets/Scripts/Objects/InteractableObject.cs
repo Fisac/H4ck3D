@@ -12,9 +12,12 @@ public class InteractableObject : MonoBehaviour {
 
     Collider objectCollider;
     Rigidbody objectRigidbody;
+    Transform objectTransform;
+    public GameObject thisGameObject;
 
     public float mass;
     public float maximumLiftWeight = 4;
+    float boxVolume;
 
     bool newMatter;
 
@@ -39,20 +42,21 @@ public class InteractableObject : MonoBehaviour {
 
     void UpdateProperties()
     {
+        objectTransform = GetComponent<Transform>();
         objectCollider = GetComponent<BoxCollider>();
         objectRigidbody = GetComponent<Rigidbody>();
 
-        mass = matter.mass;
-        objectRigidbody.mass = mass;
+        MassCalculation();
 
-        Debug.Log("Name: " + matter.name);
-        Debug.Log("Mass: " + matter.mass);
+        Debug.Log("Object name: " + thisGameObject.name);
+        Debug.Log("Matter: " + matter.name);
+        Debug.Log("Mass: " + mass);
         Debug.Log("Friction multiplier: " + matter.frictionMultiplier);
         Debug.Log("Is physical: " + matter.isPhysical);
         Debug.Log("Is destructable: " + matter.isDestructable);
         Debug.Log("Is physical: " + matter.isPhysical);
 
-        if (matter.mass > maximumLiftWeight)
+        if (mass > maximumLiftWeight)
         {
             vrtkInteractable.isGrabbable = false;
             objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
@@ -66,5 +70,13 @@ public class InteractableObject : MonoBehaviour {
 
         newMatter = false;
         Debug.Log("newMatter: " + newMatter);
+    }
+
+    void MassCalculation()
+    {
+        boxVolume = objectTransform.localScale.x * objectTransform.localScale.y * objectTransform.localScale.z;
+        mass = matter.density * boxVolume;
+
+        objectRigidbody.mass = mass;
     }
 }

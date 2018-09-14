@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c36989d97eff2b45b30f435e46eb976, type: 3}
   m_Name: Metal
   m_EditorClassIdentifier: 
-  name: Iron
-  mass: 10
+  name: Metal
+  density: 10
   frictionMultiplier: 2
   isDestructable: 0
   isPhysical: 1
-  matterMaterial: {fileID: 0}
+  matterMaterial: {fileID: 2100000, guid: f1ce015fe2ae86b4ab51fdf2865de2d4, type: 2}

@@ -7,7 +7,7 @@ public class Matter : ScriptableObject {
 
     public new string name;
 
-    public float mass;
+    public float density;
 
     public float frictionMultiplier;
 
