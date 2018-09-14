@@ -187,7 +187,7 @@ namespace VRTK
         protected bool beamEnabledState = false;
         protected bool lastPointerPressState = false;
         protected bool lastPointerClickState = false;
-        public GameObject currentTarget;
+        protected GameObject currentTarget;
 
         protected SDK_BaseController.ControllerHand cachedAttachedHand = SDK_BaseController.ControllerHand.None;
         protected Transform cachedPointerAttachPoint = null;
