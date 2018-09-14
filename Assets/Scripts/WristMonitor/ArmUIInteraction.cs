@@ -21,21 +21,10 @@ public class ArmUIInteraction : MonoBehaviour {
         }
     }
 
+    //THIS CAN BE OPTIMIZED CAN REMOVE UPDATE SOMEHOW!
     void Update () {
-        //currentObject = uiPointer.pointerEventData.pointerDrag;
-        Debug.Log(currentObject);
-	}
-
-    public void AddCurrentObject()
-    {
-        Debug.Log("ADDED: " + uiPointer.pointerEventData.pointerDrag);
         currentObject = uiPointer.pointerEventData.pointerDrag;
-    }
-
-    public void RemoveCurrentObject()
-    {
-        //Debug.Log("REMOVED: " + gameObject);
-        //currentObject = null;
-    }
+        //Debug.Log(currentObject);
+	}
 
 }
