@@ -26,5 +26,6 @@ public class ArmUIInteraction : MonoBehaviour {
         currentObject = uiPointer.pointerEventData.pointerDrag;
         //Debug.Log(currentObject);
 	}
+    //TODO Make it so currentObject can be assigned from world objects.
 
 }
