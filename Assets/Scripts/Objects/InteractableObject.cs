@@ -8,7 +8,7 @@ public class InteractableObject : MonoBehaviour {
 
     public Matter matter;
 
-    public Destroy destroyGlass;
+    public DestroyGlass destroyGlass;
     public Manipulatable manipulatable;
 
     public List<Matter> matters;

@@ -43,13 +43,14 @@ GameObject:
   - component: {fileID: 114538907781146304}
   - component: {fileID: 114713575200716920}
   - component: {fileID: 114772081308577824}
-  - component: {fileID: 114997209988892196}
   - component: {fileID: 114200210368072846}
   - component: {fileID: 114552851757040038}
   - component: {fileID: 114968601318155028}
   - component: {fileID: 114985922827953642}
   - component: {fileID: 114775704491894718}
   - component: {fileID: 114015432200941930}
+  - component: {fileID: 114908693553660984}
+  - component: {fileID: 114085026586283152}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -265,6 +266,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vrtkInteractable: {fileID: 114538907781146304}
   testUIElement: {fileID: 223418230059007414}
+--- !u!114 &114085026586283152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107154010517284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce54b3bef8369d4fbcbe2a6f757c9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: {fileID: 1107154010517284}
+  interactableObject: {fileID: 114968601318155028}
+  mesh: {fileID: 23233574208203778}
 --- !u!114 &114086885358425844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -482,6 +497,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114908693553660984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107154010517284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c611dd844eb7274dafbab3198277af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114930219320897502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -527,11 +553,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   matter: {fileID: 11400000, guid: 091c41536ff0edc4f8a46b1a95018840, type: 2}
+  destroyGlass: {fileID: 0}
+  manipulatable: {fileID: 0}
   matters: []
   thisGameObject: {fileID: 1107154010517284}
   mass: 0
   maximumLiftWeight: 4
   boxVolume: 0
+  force: 0
 --- !u!114 &114981903081957538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -570,20 +599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0804bd16998084a81745040ab6448e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114997209988892196
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1107154010517284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cce54b3bef8369d4fbcbe2a6f757c9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyed: {fileID: 1603204704772018, guid: cd09aabdf57daf1488ebf4bc0f2be4fb, type: 2}
-  interactableObject: {fileID: 114968601318155028}
-  mesh: {fileID: 23233574208203778}
 --- !u!222 &222068080772788320
 CanvasRenderer:
   m_ObjectHideFlags: 1
