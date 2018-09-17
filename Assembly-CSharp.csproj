@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AttractObjects.cs" />
     <Compile Include="Assets\Destroy.cs" />
     <Compile Include="Assets\ProvScript.cs" />
     <Compile Include="Assets\Scripts\Common\Singleton.cs" />
