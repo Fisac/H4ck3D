@@ -23,7 +23,7 @@ public class ArmUIInteraction : MonoBehaviour {
 
     //THIS CAN BE OPTIMIZED CAN REMOVE UPDATE SOMEHOW!
     void Update () {
-        currentObject = uiPointer.pointerEventData.pointerDrag;
+        //currentObject = uiPointer.pointerEventData.pointerDrag;
         //Debug.Log(currentObject);
 	}
     //TODO Make it so currentObject can be assigned from world objects.
