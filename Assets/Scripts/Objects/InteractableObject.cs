@@ -8,6 +8,9 @@ public class InteractableObject : MonoBehaviour {
 
     public Matter matter;
 
+    DestroyGlass destroyGlass;
+    Manipulatable manipulatable;
+
     public List<Matter> matters;
 
     Collider objectCollider;
@@ -18,6 +21,10 @@ public class InteractableObject : MonoBehaviour {
     public float mass;
     public float maximumLiftWeight = 4;
     public float boxVolume;
+
+    public float force;
+    float highestVelocity;
+    float acceleration;
 
     bool newMatter;
 
@@ -36,8 +43,12 @@ public class InteractableObject : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        //If(grabbable)
-        //Force = mass * acceleration, acceleration = units/(second*second) or (currentVelocity-startVelocity)/timeBetweenReadings
+        if (manipulatable.moving)
+        {
+            highestVelocity = Mathf.Max(objectRigidbody.velocity.x, objectRigidbody.velocity.y, objectRigidbody.velocity.z);
+            acceleration = highestVelocity / Time.fixedDeltaTime;
+            force = mass * acceleration;
+        }
     }
 
     void UpdateMatter(Matter matter)
@@ -63,6 +74,15 @@ public class InteractableObject : MonoBehaviour {
         Debug.Log("Is physical: " + matter.isPhysical);
         Debug.Log("Is destructable: " + matter.isDestructable);
         Debug.Log("Is physical: " + matter.isPhysical);
+
+        if (matter.name=="Glass")
+        {
+            destroyGlass.enabled = true;
+        }
+        else
+        {
+            destroyGlass.enabled = false;
+        }
 
         if (mass > maximumLiftWeight)
         {

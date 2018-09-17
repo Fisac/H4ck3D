@@ -68,7 +68,6 @@ public class Manipulatable : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("COLLIDER IS: " + collision.gameObject);
         if(!colliders.Contains(collision.gameObject))
             colliders.Add(collision.gameObject);
     }
