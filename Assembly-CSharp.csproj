@@ -61,10 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Destroy.cs" />
     <Compile Include="Assets\ProvScript.cs" />
     <Compile Include="Assets\Scripts\Common\Singleton.cs" />
     <Compile Include="Assets\Scripts\ControllerScripts\TestUIScript.cs" />
+    <Compile Include="Assets\Scripts\DestroyGlass.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\MaterialTestEditor.cs" />
     <Compile Include="Assets\Scripts\ForceCheck.cs" />
     <Compile Include="Assets\Scripts\ManipulationSystem\Conditions.cs" />
@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Objects\LocalScaling.cs" />
     <Compile Include="Assets\Scripts\Objects\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\Objects\UIPopup.cs" />
+    <Compile Include="Assets\Scripts\TestFlipMaterial.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\ArmUIInteraction.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\ArmUIManager.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />

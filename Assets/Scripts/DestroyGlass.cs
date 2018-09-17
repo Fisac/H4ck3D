@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destroy : MonoBehaviour {
+public class DestroyGlass : MonoBehaviour {
 
     private float objectnumber;
     public GameObject destroyed;
