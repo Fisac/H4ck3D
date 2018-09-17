@@ -10,10 +10,12 @@ public class InteractableObject : MonoBehaviour {
 
     public List<Matter> matters;
 
+    Renderer materialRenderer;
     Collider objectCollider;
     Rigidbody objectRigidbody;
     Transform objectTransform;
     public GameObject thisGameObject;
+
 
     public float mass;
     public float maximumLiftWeight = 4;
@@ -42,10 +44,12 @@ public class InteractableObject : MonoBehaviour {
 
     void UpdateProperties()
     {
+        materialRenderer = gameObject.GetComponent<Renderer>();
         objectTransform = GetComponent<Transform>();
         objectCollider = GetComponent<BoxCollider>();
         objectRigidbody = GetComponent<Rigidbody>();
 
+        materialRenderer.material = matter.matterMaterial;
         objectCollider.material = matter.physicMaterial;
 
         MassCalculation();
