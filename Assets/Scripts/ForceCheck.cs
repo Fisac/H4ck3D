@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class ForceCheck : MonoBehaviour {
 
-    float breakingPoint;
+    InteractableObject interactableObject;
+
+    private void Awake()
+    {
+        interactableObject = GetComponent<InteractableObject>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (true)//force is greater then threshhold value
+        if (other.GetComponent<InteractableObject>().force > interactableObject.matter.breakingPoint)
         {
-
+            //I am destroyed
         }
     }
 }
