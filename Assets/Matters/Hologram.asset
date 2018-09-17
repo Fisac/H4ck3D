@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c36989d97eff2b45b30f435e46eb976, type: 3}
-  m_Name: Default
+  m_Name: Hologram
   m_EditorClassIdentifier: 
-  name: Default
-  density: 1
+  name: Hologram
+  density: 0
   frictionMultiplier: 1
   isDestructable: 0
-  isPhysical: 1
-  matterMaterial: {fileID: 2100000, guid: 53973b39fe8f80e48a9fa47ebb930707, type: 2}
-  physicMaterial: {fileID: 13400000, guid: 1dc3c432b7ec21641a3d100a3dab0982, type: 2}
+  isPhysical: 0
+  matterMaterial: {fileID: 2100000, guid: 2f764c7e9c8cead4f883a3ffaff5e847, type: 2}
+  physicMaterial: {fileID: 13400000, guid: 0288da0a057aeac439fd6e354ae557c6, type: 2}

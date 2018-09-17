@@ -5,7 +5,7 @@ PhysicMaterial:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Glitch
+  m_Name: NonPhysical
   dynamicFriction: 1
   staticFriction: 1
   bounciness: 0
