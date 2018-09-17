@@ -706,6 +706,14 @@ Prefab:
       propertyPath: scriptAliasRightController
       value: 
       objectReference: {fileID: 258583453}
+    - target: {fileID: 4870958160429932, guid: 04cb25cd00dc2784b98bdb658ee87ab3, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584039941883376, guid: 04cb25cd00dc2784b98bdb658ee87ab3, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04cb25cd00dc2784b98bdb658ee87ab3, type: 2}
   m_IsPrefabAsset: 0
