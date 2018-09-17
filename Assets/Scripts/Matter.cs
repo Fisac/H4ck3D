@@ -7,7 +7,7 @@ public class Matter : ScriptableObject {
 
     public new string name;
 
-    public float mass;
+    public float density;
 
     public float frictionMultiplier;
 
@@ -16,4 +16,6 @@ public class Matter : ScriptableObject {
     public bool isPhysical;
 
     public Material matterMaterial;
+
+    public PhysicMaterial physicMaterial;
 }

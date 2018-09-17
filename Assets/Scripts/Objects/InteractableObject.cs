@@ -12,9 +12,12 @@ public class InteractableObject : MonoBehaviour {
 
     Collider objectCollider;
     Rigidbody objectRigidbody;
+    Transform objectTransform;
+    public GameObject thisGameObject;
 
     public float mass;
     public float maximumLiftWeight = 4;
+    float boxVolume;
 
     bool newMatter;
 
@@ -39,20 +42,23 @@ public class InteractableObject : MonoBehaviour {
 
     void UpdateProperties()
     {
+        objectTransform = GetComponent<Transform>();
         objectCollider = GetComponent<BoxCollider>();
         objectRigidbody = GetComponent<Rigidbody>();
 
-        mass = matter.mass;
-        objectRigidbody.mass = mass;
+        objectCollider.material = matter.physicMaterial;
 
-        Debug.Log("Name: " + matter.name);
-        Debug.Log("Mass: " + matter.mass);
+        MassCalculation();
+
+        Debug.Log("Object name: " + thisGameObject.name);
+        Debug.Log("Matter: " + matter.name);
+        Debug.Log("Mass: " + mass);
         Debug.Log("Friction multiplier: " + matter.frictionMultiplier);
         Debug.Log("Is physical: " + matter.isPhysical);
         Debug.Log("Is destructable: " + matter.isDestructable);
         Debug.Log("Is physical: " + matter.isPhysical);
 
-        if (matter.mass > maximumLiftWeight)
+        if (mass > maximumLiftWeight)
         {
             vrtkInteractable.isGrabbable = false;
             objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
@@ -60,11 +66,27 @@ public class InteractableObject : MonoBehaviour {
         if (!matter.isPhysical)
         {
             vrtkInteractable.isGrabbable = false;
-            objectCollider.enabled = !objectCollider.enabled;
             objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
-        }
 
+            if (matter.name=="Hologram")
+            {
+                objectCollider.isTrigger = true;
+            }
+            else
+            {
+                objectCollider.enabled = !objectCollider.enabled;
+                objectCollider.isTrigger = false;
+            }
+        }
         newMatter = false;
         Debug.Log("newMatter: " + newMatter);
+    }
+
+    void MassCalculation()
+    {
+        boxVolume = objectTransform.localScale.x * objectTransform.localScale.y * objectTransform.localScale.z;
+        mass = matter.density * boxVolume;
+
+        objectRigidbody.mass = mass;
     }
 }

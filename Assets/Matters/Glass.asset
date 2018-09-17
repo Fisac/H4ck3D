@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: Glass
   m_EditorClassIdentifier: 
   name: Glass
-  mass: 1
+  density: 1
   frictionMultiplier: 0.5
   isDestructable: 1
   isPhysical: 1
   matterMaterial: {fileID: 2100000, guid: 2fc2c31276f37d344b84fbd5fb35408a, type: 2}
+  physicMaterial: {fileID: 13400000, guid: e3e26a5bad9dd9a41a73e127f58da3b3, type: 2}
