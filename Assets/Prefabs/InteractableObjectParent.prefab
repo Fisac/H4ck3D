@@ -272,12 +272,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1107154010517284}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cce54b3bef8369d4fbcbe2a6f757c9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: {fileID: 1107154010517284}
+  destroyed: {fileID: 1744831886945044, guid: 00fe2bdfee7c5854a9c9163fb60c9c77, type: 2}
   interactableObject: {fileID: 114968601318155028}
   mesh: {fileID: 23233574208203778}
 --- !u!114 &114086885358425844

@@ -13,7 +13,15 @@ public class DestroyGlass : MonoBehaviour {
 	void OnMouseDown()
     {
         float boxVolume = interactableObject.boxVolume;
-        objectnumber = boxVolume;
+
+        if (boxVolume < 2)
+        {
+            objectnumber = boxVolume;
+        }
+        else
+        {
+            objectnumber = 2;
+        }
 
         print(objectnumber);
         for (int i = 0; i <= objectnumber; i++)
@@ -23,9 +31,8 @@ public class DestroyGlass : MonoBehaviour {
         mesh.enabled = false;
     }
 	
-	// Update is called once per frame
-	void Update ()
+    public void DestroyTheGlass()
     {
-		
-	}
+
+    }
 }

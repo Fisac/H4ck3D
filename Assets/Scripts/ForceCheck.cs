@@ -5,6 +5,7 @@ using UnityEngine;
 public class ForceCheck : MonoBehaviour {
 
     InteractableObject interactableObject;
+    DestroyGlass destroyGlass;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class ForceCheck : MonoBehaviour {
         if (other.GetComponent<InteractableObject>().force > interactableObject.matter.breakingPoint)
         {
             //I am destroyed
+            //destroyGlass.DestroyTheGlass();
         }
     }
 }

@@ -8,8 +8,8 @@ public class InteractableObject : MonoBehaviour {
 
     public Matter matter;
 
-    public DestroyGlass destroyGlass;
-    public Manipulatable manipulatable;
+    DestroyGlass destroyGlass;
+    Manipulatable manipulatable;
 
     public List<Matter> matters;
 
@@ -78,6 +78,10 @@ public class InteractableObject : MonoBehaviour {
         if (matter.name=="Glass")
         {
             destroyGlass.enabled = true;
+        }
+        else
+        {
+            destroyGlass.enabled = false;
         }
 
         if (mass > maximumLiftWeight)
