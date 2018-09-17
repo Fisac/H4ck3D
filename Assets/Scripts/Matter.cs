@@ -16,4 +16,6 @@ public class Matter : ScriptableObject {
     public bool isPhysical;
 
     public Material matterMaterial;
+
+    public PhysicMaterial physicMaterial;
 }

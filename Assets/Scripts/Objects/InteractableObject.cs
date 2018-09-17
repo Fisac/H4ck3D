@@ -46,6 +46,8 @@ public class InteractableObject : MonoBehaviour {
         objectCollider = GetComponent<BoxCollider>();
         objectRigidbody = GetComponent<Rigidbody>();
 
+        objectCollider.material = matter.physicMaterial;
+
         MassCalculation();
 
         Debug.Log("Object name: " + thisGameObject.name);
