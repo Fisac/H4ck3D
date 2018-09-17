@@ -66,10 +66,18 @@ public class InteractableObject : MonoBehaviour {
         if (!matter.isPhysical)
         {
             vrtkInteractable.isGrabbable = false;
-            objectCollider.enabled = !objectCollider.enabled;
             objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
-        }
 
+            if (matter.name=="Hologram")
+            {
+                objectCollider.isTrigger = true;
+            }
+            else
+            {
+                objectCollider.enabled = !objectCollider.enabled;
+                objectCollider.isTrigger = false;
+            }
+        }
         newMatter = false;
         Debug.Log("newMatter: " + newMatter);
     }
