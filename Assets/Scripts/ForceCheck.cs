@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ForceCheck : MonoBehaviour {
-
+public class ForceCheck : MonoBehaviour
+{
     InteractableObject interactableObject;
     DestroyGlass destroyGlass;
 
@@ -14,10 +14,12 @@ public class ForceCheck : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<InteractableObject>().force > interactableObject.matter.breakingPoint)
+        Debug.Log("Collision!");
+        if (other.GetComponent<InteractableObject>().force > interactableObject.matter.breakingPoint/* && interactableObject.matter.isDestructable*/)
         {
             //I am destroyed
             //destroyGlass.DestroyTheGlass();
+            Debug.Log("Collision between " + other.name + "and " + this.name + " with a force of " + other.GetComponent<InteractableObject>().force);
         }
     }
 }

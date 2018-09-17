@@ -41,13 +41,15 @@ public class InteractableObject : MonoBehaviour {
         }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         if (manipulatable.moving)
         {
             highestVelocity = Mathf.Max(objectRigidbody.velocity.x, objectRigidbody.velocity.y, objectRigidbody.velocity.z);
             acceleration = highestVelocity / Time.fixedDeltaTime;
             force = mass * acceleration;
+
+            Debug.Log(force);
         }
     }
 
@@ -83,12 +85,19 @@ public class InteractableObject : MonoBehaviour {
         {
             destroyGlass.enabled = false;
         }
-
+        //MaximumLiftWeight check
         if (mass > maximumLiftWeight)
         {
             vrtkInteractable.isGrabbable = false;
             objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         }
+        else
+        {
+            vrtkInteractable.isGrabbable = true;
+            objectRigidbody.useGravity = true;
+        }
+
+        //Is it physical?
         if (!matter.isPhysical)
         {
             vrtkInteractable.isGrabbable = false;
@@ -107,7 +116,7 @@ public class InteractableObject : MonoBehaviour {
         newMatter = false;
         Debug.Log("newMatter: " + newMatter);
     }
-
+    //Volume and mass calculation
     void MassCalculation()
     {
         boxVolume = objectTransform.localScale.x * objectTransform.localScale.y * objectTransform.localScale.z;

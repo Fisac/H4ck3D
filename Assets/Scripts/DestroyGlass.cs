@@ -5,12 +5,11 @@ using UnityEngine;
 public class DestroyGlass : MonoBehaviour {
 
     private float objectnumber;
-    public GameObject destroyed;
+    public GameObject glassShards;
     public InteractableObject interactableObject;
     public MeshRenderer mesh;
 
-	// Use this for initialization
-	void OnMouseDown()
+    public void DestroyTheGlass()
     {
         float boxVolume = interactableObject.boxVolume;
 
@@ -26,13 +25,8 @@ public class DestroyGlass : MonoBehaviour {
         print(objectnumber);
         for (int i = 0; i <= objectnumber; i++)
         { 
-            Instantiate(destroyed, transform.position, transform.rotation);
+            Instantiate(glassShards, transform.position, transform.rotation);
         }
         mesh.enabled = false;
-    }
-	
-    public void DestroyTheGlass()
-    {
-
     }
 }
