@@ -17,7 +17,7 @@ public class InteractableObject : MonoBehaviour {
 
     public float mass;
     public float maximumLiftWeight = 4;
-    float boxVolume;
+    public float boxVolume;
 
     bool newMatter;
 
@@ -32,6 +32,12 @@ public class InteractableObject : MonoBehaviour {
         {
             UpdateProperties();
         }
+    }
+
+    private void FixedUpdate()
+    {
+        //If(grabbable)
+        //Force = mass * acceleration, acceleration = units/(second*second) or (currentVelocity-startVelocity)/timeBetweenReadings
     }
 
     void UpdateMatter(Matter matter)
