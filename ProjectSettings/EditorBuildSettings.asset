@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/_ChrisScene.unity
+    guid: 9b1ac6abb5850704abf02e478eb13676
+  m_configObjects: {}
