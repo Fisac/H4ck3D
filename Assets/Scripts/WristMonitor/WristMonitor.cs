@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class WristMonitor : MonoBehaviour {
 
-    public GameObject objectIf, objectEqual, target, targetEqual;
+    public Statement[] statements;
 
-	void Start () {
-		
-	}
+    private void Awake()
+    {
+
+    }
+
+    private void DrawStatements()
+    {
+        
+    }
 	
 	void Update () {
 		
