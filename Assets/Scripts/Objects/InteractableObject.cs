@@ -16,6 +16,7 @@ public class InteractableObject : MonoBehaviour {
     Collider objectCollider;
     Rigidbody objectRigidbody;
     Transform objectTransform;
+    private Renderer myRenderer;
     public GameObject thisGameObject;
 
     public float mass;
@@ -23,10 +24,21 @@ public class InteractableObject : MonoBehaviour {
     public float boxVolume;
 
     public float force;
-    float highestVelocity;
+    float newForce;
+    public float highestVelocity;
     float acceleration;
 
     bool newMatter;
+
+    private void Awake()
+    {
+        objectTransform = GetComponent<Transform>();
+        objectCollider = GetComponent<BoxCollider>();
+        objectRigidbody = GetComponent<Rigidbody>();
+        myRenderer = GetComponent<Renderer>();
+
+        myRenderer.material = matter.matterMaterial;
+    }
 
     void Start()
     {
@@ -43,13 +55,22 @@ public class InteractableObject : MonoBehaviour {
 
     void FixedUpdate()
     {
+        //if (manipulatable.moving)
+        //{
+        //    highestVelocity = Mathf.Max(objectRigidbody.velocity.x, objectRigidbody.velocity.y, objectRigidbody.velocity.z);
+        //    acceleration = highestVelocity / Time.fixedDeltaTime;
+        //    force = mass * acceleration;
+        //}
         if (manipulatable.moving)
         {
-            highestVelocity = Mathf.Max(objectRigidbody.velocity.x, objectRigidbody.velocity.y, objectRigidbody.velocity.z);
-            acceleration = highestVelocity / Time.fixedDeltaTime;
-            force = mass * acceleration;
+            highestVelocity = Mathf.Max(Mathf.Abs(objectRigidbody.velocity.x), Mathf.Abs(objectRigidbody.velocity.y), Mathf.Abs(objectRigidbody.velocity.z));
+            force = mass * highestVelocity;
 
-            Debug.Log(force);
+            if (force > 0.1f)
+            {
+                Debug.Log("Force: " + force);
+            }
+
         }
     }
 
@@ -66,6 +87,7 @@ public class InteractableObject : MonoBehaviour {
         objectRigidbody = GetComponent<Rigidbody>();
 
         objectCollider.material = matter.physicMaterial;
+        myRenderer.material = matter.matterMaterial;
 
         MassCalculation();
 
