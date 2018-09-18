@@ -19,6 +19,7 @@ public class InteractableObject : MonoBehaviour {
     private Renderer myRenderer;
     public GameObject thisGameObject;
 
+    public bool liftable;
     public float mass;
     public float maximumLiftWeight = 4;
     public float boxVolume;
@@ -92,11 +93,13 @@ public class InteractableObject : MonoBehaviour {
         //MaximumLiftWeight check
         if (mass > maximumLiftWeight)
         {
+            liftable = false;
             vrtkInteractable.isGrabbable = false;
             objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         }
         else
         {
+            liftable = true;
             vrtkInteractable.isGrabbable = true;
             objectRigidbody.useGravity = true;
         }

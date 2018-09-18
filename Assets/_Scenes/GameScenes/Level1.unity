@@ -425,7 +425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 393745852}
   m_Layer: 0
-  m_Name: Level
+  m_Name: LevelGeometry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -603,8 +603,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiPointer: {fileID: 701316191}
+  raycastOrigin: {fileID: 0}
   currentUIElement: {fileID: 0}
-  currentWorldObject: {fileID: 0}
+  selectedUIElement: {fileID: 0}
+  selectedWorldObject: {fileID: 0}
   isDraggingUI: 0
 --- !u!114 &701316190
 MonoBehaviour:
@@ -685,7 +687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &728472387
 Transform:
   m_ObjectHideFlags: 0
@@ -859,7 +861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1139461370
 Transform:
   m_ObjectHideFlags: 0
@@ -965,7 +967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1539491417
 Transform:
   m_ObjectHideFlags: 0
@@ -1265,7 +1267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2087296186
 Transform:
   m_ObjectHideFlags: 0

@@ -46,8 +46,8 @@ public class ObjectHandler : MonoBehaviour {
             RaycastHit hit;
             Debug.Log("2");
 
-            if (Physics.Raycast(transform.position, 
-                transform.forward, out hit, grabDistance, layerMask))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, grabDistance, layerMask) &&
+                hit.transform.gameObject.GetComponent<InteractableObject>().liftable)
             {
                 Debug.DrawRay(transform.position, transform.forward * 1000, Color.yellow, 1000);
                 heldObject = hit.collider.gameObject;
