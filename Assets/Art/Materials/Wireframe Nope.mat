@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Wireframe
+  m_Name: Wireframe Nope
   m_Shader: {fileID: 4800000, guid: 61c28bdcc4e99784e873b8ec74464091, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -75,5 +75,5 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorFill: {r: 0.028301895, g: 0.028277623, b: 0.028168395, a: 1}
-    - _ColorWire: {r: 0.49019608, g: 0.8843251, b: 0.9622641, a: 1}
+    - _ColorWire: {r: 0.94509804, g: 0, b: 0.241339, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
