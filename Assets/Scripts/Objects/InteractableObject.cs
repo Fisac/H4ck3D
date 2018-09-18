@@ -107,6 +107,7 @@ public class InteractableObject : MonoBehaviour {
         //Is it physical?
         if (!matter.isPhysical)
         {
+            liftable = false;
             vrtkInteractable.isGrabbable = false;
             objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
 
