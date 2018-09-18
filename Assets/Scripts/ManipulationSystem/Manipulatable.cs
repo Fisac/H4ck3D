@@ -45,7 +45,7 @@ public class Manipulatable : MonoBehaviour {
         if (rigidBody == null)
             return;
 
-        if (rigidBody.velocity.magnitude > 0)
+        if (Mathf.Abs(rigidBody.velocity.magnitude) > 0)
             moving = true;
         else
             moving = false;
