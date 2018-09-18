@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\TestFlipMaterial.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\ArmUIInteraction.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\ArmUIManager.cs" />
+    <Compile Include="Assets\Scripts\WristMonitor\WristMonitor.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
