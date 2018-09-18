@@ -4,26 +4,31 @@ using UnityEngine;
 
 public class DestroyGlass : MonoBehaviour {
 
-    private float objectnumber;
+    private int objectNumber = 1;
     public GameObject glassShards;
-    public InteractableObject interactableObject;
+    InteractableObject interactableObject;
     public MeshRenderer mesh;
+
+    private void Start()
+    {
+        interactableObject = GetComponent<InteractableObject>();
+    }
 
     public void DestroyTheGlass()
     {
-        float boxVolume = interactableObject.boxVolume;
+        Debug.Log("DestroyTheGlass");
+        //if (Mathf.RoundToInt(interactableObject.boxVolume) < 2)
+        //{
+        //    objectNumber = 1;
+        //}
+        //else
+        //{
+        //    objectNumber = 2;
+        //}
+        //Debug.Log("objectNumber: " + objectNumber);
 
-        if (boxVolume < 2)
-        {
-            objectnumber = boxVolume;
-        }
-        else
-        {
-            objectnumber = 2;
-        }
-
-        print(objectnumber);
-        for (int i = 0; i <= objectnumber; i++)
+        Debug.Break();
+        for (int i = 0; i <= objectNumber; i++)
         { 
             Instantiate(glassShards, transform.position, transform.rotation);
         }

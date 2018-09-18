@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224953531969397604}
   - component: {fileID: 222574651089194216}
   - component: {fileID: 114280417963571126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PopupMatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 114015432200941930}
   - component: {fileID: 114908693553660984}
   - component: {fileID: 114085026586283152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 114226747370317060}
   - component: {fileID: 114794897492890068}
   - component: {fileID: 114162227961256284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4021455362222658}
   - component: {fileID: 114086885358425844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CanvasHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 224575082544227442}
   - component: {fileID: 222179535889925016}
   - component: {fileID: 114981903081957538}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 224539694274342642}
   - component: {fileID: 222068080772788320}
   - component: {fileID: 114930219320897502}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PopupName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4744098154955188}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InteractableObjectParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}

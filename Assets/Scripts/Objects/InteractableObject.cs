@@ -16,6 +16,7 @@ public class InteractableObject : MonoBehaviour {
     Collider objectCollider;
     Rigidbody objectRigidbody;
     Transform objectTransform;
+    private Renderer myRenderer;
     public GameObject thisGameObject;
 
     public float mass;
@@ -23,10 +24,20 @@ public class InteractableObject : MonoBehaviour {
     public float boxVolume;
 
     public float force;
-    float highestVelocity;
+    public float highestVelocity;
     float acceleration;
 
     bool newMatter;
+
+    private void Awake()
+    {
+        objectTransform = GetComponent<Transform>();
+        objectCollider = GetComponent<BoxCollider>();
+        objectRigidbody = GetComponent<Rigidbody>();
+        myRenderer = GetComponent<Renderer>();
+
+        myRenderer.material = matter.matterMaterial;
+    }
 
     void Start()
     {
@@ -43,14 +54,14 @@ public class InteractableObject : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (manipulatable.moving)
-        {
-            highestVelocity = Mathf.Max(objectRigidbody.velocity.x, objectRigidbody.velocity.y, objectRigidbody.velocity.z);
-            acceleration = highestVelocity / Time.fixedDeltaTime;
-            force = mass * acceleration;
+        //Advanced force calculation.....................................
+        highestVelocity = Mathf.Max(Mathf.Abs(objectRigidbody.velocity.x), Mathf.Abs(objectRigidbody.velocity.y), Mathf.Abs(objectRigidbody.velocity.z));
+        acceleration = highestVelocity / Time.fixedDeltaTime;
+        force = mass * acceleration;
 
-            Debug.Log(force);
-        }
+        //Simplified force calculation...................................
+        //highestVelocity = Mathf.Max(Mathf.Abs(objectRigidbody.velocity.x), Mathf.Abs(objectRigidbody.velocity.y), Mathf.Abs(objectRigidbody.velocity.z));
+        //force = mass * highestVelocity;
     }
 
     void UpdateMatter(Matter matter)
@@ -66,6 +77,7 @@ public class InteractableObject : MonoBehaviour {
         objectRigidbody = GetComponent<Rigidbody>();
 
         objectCollider.material = matter.physicMaterial;
+        myRenderer.material = matter.matterMaterial;
 
         MassCalculation();
 
@@ -77,14 +89,6 @@ public class InteractableObject : MonoBehaviour {
         Debug.Log("Is destructable: " + matter.isDestructable);
         Debug.Log("Is physical: " + matter.isPhysical);
 
-        if (matter.name=="Glass")
-        {
-            destroyGlass.enabled = true;
-        }
-        else
-        {
-            destroyGlass.enabled = false;
-        }
         //MaximumLiftWeight check
         if (mass > maximumLiftWeight)
         {
