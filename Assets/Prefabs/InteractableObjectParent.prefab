@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224953531969397604}
   - component: {fileID: 222574651089194216}
   - component: {fileID: 114280417963571126}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: PopupMatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,11 +46,10 @@ GameObject:
   - component: {fileID: 114200210368072846}
   - component: {fileID: 114552851757040038}
   - component: {fileID: 114968601318155028}
-  - component: {fileID: 114985922827953642}
   - component: {fileID: 114015432200941930}
   - component: {fileID: 114908693553660984}
   - component: {fileID: 114085026586283152}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +68,7 @@ GameObject:
   - component: {fileID: 114226747370317060}
   - component: {fileID: 114794897492890068}
   - component: {fileID: 114162227961256284}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4021455362222658}
   - component: {fileID: 114086885358425844}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: CanvasHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +101,7 @@ GameObject:
   - component: {fileID: 224575082544227442}
   - component: {fileID: 222179535889925016}
   - component: {fileID: 114981903081957538}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +118,7 @@ GameObject:
   - component: {fileID: 224539694274342642}
   - component: {fileID: 222068080772788320}
   - component: {fileID: 114930219320897502}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: PopupName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4744098154955188}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: InteractableObjectParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +277,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glassShards: {fileID: 1744831886945044, guid: 00fe2bdfee7c5854a9c9163fb60c9c77,
     type: 2}
-  interactableObject: {fileID: 114968601318155028}
   mesh: {fileID: 23233574208203778}
 --- !u!114 &114086885358425844
 MonoBehaviour:
@@ -547,6 +545,7 @@ MonoBehaviour:
   maximumLiftWeight: 4
   boxVolume: 0
   force: 0
+  highestVelocity: 0
 --- !u!114 &114981903081957538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -574,17 +573,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114985922827953642
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1107154010517284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0804bd16998084a81745040ab6448e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &222068080772788320
 CanvasRenderer:
   m_ObjectHideFlags: 1
