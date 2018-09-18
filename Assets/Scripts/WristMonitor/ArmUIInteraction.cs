@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class ArmUIInteraction : MonoBehaviour {
 
     public VRTK.VRTK_UIPointer uiPointer;
-    public GameObject currentUIElement, currentWorldObject;
+    public Transform raycastOrigin;
+    public GameObject currentUIElement, selectedUIElement, selectedWorldObject;
     public bool isDraggingUI;
 
     private void Awake()
@@ -26,7 +28,9 @@ public class ArmUIInteraction : MonoBehaviour {
     //THIS CAN BE OPTIMIZED CAN REMOVE UPDATE SOMEHOW!
     void Update () {
         if(uiPointer.pointerEventData != null)
+        {
             currentUIElement = uiPointer.pointerEventData.pointerDrag;
+        }
 	}
     //TODO Make it so currentObject can be assigned from world objects.
 
@@ -40,6 +44,7 @@ public class ArmUIInteraction : MonoBehaviour {
         if (isDraggingUI == false)
             return;
 
+        //currentUIElement.transform.SetPositionAndRotation(Vector3.zero, Quaternion.Euler(Vector3.zero));
         DetectObjectRaycast();
 
         isDraggingUI = false;
@@ -47,22 +52,25 @@ public class ArmUIInteraction : MonoBehaviour {
 
     public void DetectObjectRaycast()
     {
-        Debug.Log("FIRE!!!");
-
         RaycastHit hit;
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(raycastOrigin.position, raycastOrigin.forward);
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
-            Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.yellow, 1000);
-            Debug.Log("Did Hit");
-            Debug.Log(hit.collider.gameObject.name);
-            currentWorldObject = hit.collider.gameObject;
+            GameObject hitObject = hit.collider.gameObject;
+
+            if(hitObject.GetComponent<Manipulatable>() != null)
+            {
+                selectedWorldObject = hit.collider.gameObject;
+                SetUIObjectName(selectedWorldObject.name);
+            }
         }
-        else
-        {
-            Debug.DrawRay(transform.position, transform.forward * 1000, Color.white, 1000);
-            Debug.Log("Did not Hit");
-        }
+    }
+
+    public void SetUIObjectName(string name)
+    {
+        Text uiText = currentUIElement.GetComponent<Text>();
+
+        uiText.text = name;
     }
 }
