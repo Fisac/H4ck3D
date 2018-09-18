@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 4707335085139362}
   - component: {fileID: 114147655141188614}
   - component: {fileID: 114318224940945240}
+  - component: {fileID: 114350192310191608}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -190,7 +191,6 @@ GameObject:
   - component: {fileID: 4129339333024020}
   - component: {fileID: 114345352347468284}
   - component: {fileID: 114793117133280202}
-  - component: {fileID: 114098915597173496}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -1561,24 +1561,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114098915597173496
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1290743972307206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e9beb7e1b41c74dbf2b20c3b335d54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grabDistance: 10
-  throwForce: 30
-  heldPosition: {fileID: 4498730774686794}
-  throwForceMode: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!114 &114147655141188614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1731,6 +1713,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
+--- !u!114 &114350192310191608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1067372610768524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e9beb7e1b41c74dbf2b20c3b335d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabDistance: 10
+  throwForce: 30
+  heldPosition: {fileID: 4498730774686794}
+  throwForceMode: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &114356281603178718
 MonoBehaviour:
   m_ObjectHideFlags: 1
