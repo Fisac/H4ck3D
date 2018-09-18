@@ -24,7 +24,6 @@ public class InteractableObject : MonoBehaviour {
     public float boxVolume;
 
     public float force;
-    float newForce;
     public float highestVelocity;
     float acceleration;
 
@@ -55,23 +54,14 @@ public class InteractableObject : MonoBehaviour {
 
     void FixedUpdate()
     {
-        //if (manipulatable.moving)
-        //{
-        //    highestVelocity = Mathf.Max(objectRigidbody.velocity.x, objectRigidbody.velocity.y, objectRigidbody.velocity.z);
-        //    acceleration = highestVelocity / Time.fixedDeltaTime;
-        //    force = mass * acceleration;
-        //}
-        if (manipulatable.moving)
-        {
-            highestVelocity = Mathf.Max(Mathf.Abs(objectRigidbody.velocity.x), Mathf.Abs(objectRigidbody.velocity.y), Mathf.Abs(objectRigidbody.velocity.z));
-            force = mass * highestVelocity;
+        //Advanced force calculation.....................................
+        highestVelocity = Mathf.Max(Mathf.Abs(objectRigidbody.velocity.x), Mathf.Abs(objectRigidbody.velocity.y), Mathf.Abs(objectRigidbody.velocity.z));
+        acceleration = highestVelocity / Time.fixedDeltaTime;
+        force = mass * acceleration;
 
-            if (force > 0.1f)
-            {
-                Debug.Log("Force: " + force);
-            }
-
-        }
+        //Simplified force calculation...................................
+        //highestVelocity = Mathf.Max(Mathf.Abs(objectRigidbody.velocity.x), Mathf.Abs(objectRigidbody.velocity.y), Mathf.Abs(objectRigidbody.velocity.z));
+        //force = mass * highestVelocity;
     }
 
     void UpdateMatter(Matter matter)
@@ -99,14 +89,6 @@ public class InteractableObject : MonoBehaviour {
         Debug.Log("Is destructable: " + matter.isDestructable);
         Debug.Log("Is physical: " + matter.isPhysical);
 
-        if (matter.name=="Glass")
-        {
-            destroyGlass.enabled = true;
-        }
-        else
-        {
-            destroyGlass.enabled = false;
-        }
         //MaximumLiftWeight check
         if (mass > maximumLiftWeight)
         {

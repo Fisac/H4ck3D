@@ -10,21 +10,24 @@ public class ForceCheck : MonoBehaviour
     private void Awake()
     {
         interactableObject = GetComponent<InteractableObject>();
+        destroyGlass = GetComponent<DestroyGlass>();
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("highestVelocity:" + other.transform.GetComponentInChildren<InteractableObject>().highestVelocity);
-        Debug.Log("Force of "+ other.transform.name + " is " + other.transform.GetComponentInChildren<InteractableObject>().force);
-
         if (!other.transform.GetComponentInChildren<InteractableObject>())
         {
             return;
         }
-        else if (other.transform.GetComponentInChildren<InteractableObject>().force > interactableObject.matter.breakingPoint)
+
+        if (other.transform.GetComponentInChildren<InteractableObject>().force > interactableObject.matter.breakingPoint && interactableObject.matter.isDestructable)
         {
-            Debug.Log("You dead");    
-            //destroyGlass.DestroyTheGlass();
-        }  
+            destroyGlass.DestroyTheGlass();
+        }
+        else
+        {
+            Debug.Break();
+            return;
+        }
     }
 }
