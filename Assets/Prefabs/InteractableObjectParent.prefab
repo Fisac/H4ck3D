@@ -47,8 +47,9 @@ GameObject:
   - component: {fileID: 114552851757040038}
   - component: {fileID: 114968601318155028}
   - component: {fileID: 114985922827953642}
-  - component: {fileID: 114775704491894718}
   - component: {fileID: 114015432200941930}
+  - component: {fileID: 114908693553660984}
+  - component: {fileID: 114085026586283152}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -234,7 +235,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -264,6 +265,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vrtkInteractable: {fileID: 114538907781146304}
   testUIElement: {fileID: 223418230059007414}
+--- !u!114 &114085026586283152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107154010517284}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce54b3bef8369d4fbcbe2a6f757c9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glassShards: {fileID: 1744831886945044, guid: 00fe2bdfee7c5854a9c9163fb60c9c77,
+    type: 2}
+  interactableObject: {fileID: 114968601318155028}
+  mesh: {fileID: 23233574208203778}
 --- !u!114 &114086885358425844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -392,7 +408,7 @@ MonoBehaviour:
   allowedNearTouchControllers: 0
   allowedTouchControllers: 0
   ignoredColliders: []
-  isGrabbable: 0
+  isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
   validDrop: 1
@@ -453,18 +469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114775704491894718
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1107154010517284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2aa8d7dc5c1d8444ac9724e0a484a01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transitionDuration: 0
 --- !u!114 &114794897492890068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -481,6 +485,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114908693553660984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107154010517284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c611dd844eb7274dafbab3198277af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114930219320897502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -530,6 +545,8 @@ MonoBehaviour:
   thisGameObject: {fileID: 1107154010517284}
   mass: 0
   maximumLiftWeight: 4
+  boxVolume: 0
+  force: 0
 --- !u!114 &114981903081957538
 MonoBehaviour:
   m_ObjectHideFlags: 1

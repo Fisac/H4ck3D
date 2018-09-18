@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HoverTest : MonoBehaviour {
+public class UIPopup : MonoBehaviour {
 
     public VRTK.VRTK_InteractableObject vrtkInteractable;
 
