@@ -11,6 +11,7 @@ public class ObjectHandler : MonoBehaviour {
     public float dropForce;
     public float repelCountdown; 
     public float throwForce;
+    public Transform raycastOrigin;
     public Transform heldPosition;
     public ForceMode throwForceMode;
     public LayerMask layerMask = -1; 
@@ -74,17 +75,17 @@ public class ObjectHandler : MonoBehaviour {
             {
                 RaycastHit hit;
 
-                if (Physics.Raycast(transform.position, transform.forward, out hit, grabDistance, layerMask) &&
+                if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hit, grabDistance, layerMask) &&
                     hit.transform.gameObject.GetComponent<InteractableObject>().liftable)
                 {
-                    Debug.DrawRay(transform.position, transform.forward * 1000, Color.yellow, 1000);
+                    Debug.DrawRay(raycastOrigin.position, raycastOrigin.forward * 1000, Color.yellow, 1000);
                     heldObject = hit.collider.gameObject;
                     heldObject.GetComponent<Rigidbody>().isKinematic = true;
 
                 }
                 else
                 {
-                    Debug.DrawRay(transform.position, transform.forward * 1000, Color.red, 1000);
+                    Debug.DrawRay(raycastOrigin.position, raycastOrigin.forward * 1000, Color.red, 1000);
                 }
 
             }
