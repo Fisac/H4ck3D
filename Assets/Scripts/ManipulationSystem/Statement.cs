@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Statement : MonoBehaviour {
 
-    [SerializeField]
-    private Manipulatable manipulatable;
+    public Manipulatable manipulatable;
 
     public Conditions destroyCondition, movingCondition, airborneCondition;
 

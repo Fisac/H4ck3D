@@ -27,7 +27,10 @@ public class ArmUIInteraction : MonoBehaviour {
 
     //THIS CAN BE OPTIMIZED CAN REMOVE UPDATE SOMEHOW!
     void Update () {
-        if(uiPointer.pointerEventData != null)
+        if (uiPointer.pointerEventData == null)
+            return;
+
+        if(uiPointer.pointerEventData.pointerDrag != null)
         {
             currentUIElement = uiPointer.pointerEventData.pointerDrag;
         }
@@ -44,7 +47,6 @@ public class ArmUIInteraction : MonoBehaviour {
         if (isDraggingUI == false)
             return;
 
-        //currentUIElement.transform.SetPositionAndRotation(Vector3.zero, Quaternion.Euler(Vector3.zero));
         DetectObjectRaycast();
 
         isDraggingUI = false;
@@ -58,10 +60,16 @@ public class ArmUIInteraction : MonoBehaviour {
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
             GameObject hitObject = hit.collider.gameObject;
+            Manipulatable objectManipulatable = hitObject.GetComponent<Manipulatable>();
+            MonitorObject monitorObject = currentUIElement.GetComponent<MonitorObject>();
 
-            if(hitObject.GetComponent<Manipulatable>() != null)
+            if (objectManipulatable != null && monitorObject != null)
             {
                 selectedWorldObject = hit.collider.gameObject;
+
+                monitorObject.currentManipulatable = objectManipulatable;
+                monitorObject.UpdateStatement();
+
                 SetUIObjectName(selectedWorldObject.name);
             }
         }
