@@ -4189,6 +4189,12 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Destroyed
       m_Image: {fileID: 0}
+    - m_Text: '!Airborne'
+      m_Image: {fileID: 0}
+    - m_Text: '!Moving'
+      m_Image: {fileID: 0}
+    - m_Text: '!Destroyed'
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
