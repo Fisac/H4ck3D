@@ -862,6 +862,11 @@ Prefab:
       propertyPath: dropForce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114350192310191608, guid: 4ddffb45cbf00c14983ab23be85f67fa,
+        type: 2}
+      propertyPath: repelCountdown
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ddffb45cbf00c14983ab23be85f67fa, type: 2}
   m_IsPrefabAsset: 0

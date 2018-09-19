@@ -7,19 +7,21 @@ public class ObjectHandler : MonoBehaviour {
     public float initVelocity;
     public float finalVelocity; 
     public float grabDistance;
-    public float dropForce; 
+    public float dropForce;
+    public float repelCountdown; 
     public float throwForce;
     public Transform heldPosition;
     public ForceMode throwForceMode;
     public LayerMask layerMask = -1; 
     private Transform destination;
-
+    public float timeLeft; 
     private GameObject heldObject;
     public bool pickedUp; 
 	void Start () {
 
         heldObject = null;
-        pickedUp = false; 
+        pickedUp = false;
+        timeLeft = repelCountdown;
 	}
 	
 	// Update is called once per frame
@@ -30,7 +32,9 @@ public class ObjectHandler : MonoBehaviour {
            if(heldObject.transform.position != heldPosition.transform.position)
             {
                 pickedUp = true; 
-                heldObject.transform.position = Vector3.Lerp(heldObject.transform.position, heldPosition.transform.position, Mathf.Lerp(initVelocity, finalVelocity, Time.deltaTime)); 
+                heldObject.transform.position = Vector3.Lerp(heldObject.transform.position, heldPosition.transform.position, Mathf.Lerp(initVelocity, finalVelocity, Time.deltaTime));
+
+                timeLeft -= Time.deltaTime; 
             }
 
            else
@@ -47,7 +51,10 @@ public class ObjectHandler : MonoBehaviour {
         }
         if(Input.GetMouseButtonDown(1) && (pickedUp))//heldObject.transform.position == heldPosition.transform.position))
         {
+           if(timeLeft< 0)
+            {
                 RepelObject();
+            }
         }
 
         else if(Input.GetMouseButtonDown(0) && pickedUp)
@@ -84,7 +91,8 @@ public class ObjectHandler : MonoBehaviour {
         body.isKinematic = false;
         body.AddForce(throwForce * transform.forward, throwForceMode);
         heldObject = null;
-        pickedUp = false; 
+        pickedUp = false;
+        timeLeft = repelCountdown; 
     }
 
     public void DropObject()
