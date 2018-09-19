@@ -71,6 +71,9 @@ public class ArmUIInteraction : MonoBehaviour {
                 monitorObject.UpdateStatement();
 
                 SetUIObjectName(selectedWorldObject.name);
+                //Apply currentUIElement.matter.material to hitObject.InteractableObject.matter
+
+                //hitObject.GetComponent<InteractableObject>().matter.matterMaterial = currentUIElement.matter.matterMaterial;
             }
         }
     }
