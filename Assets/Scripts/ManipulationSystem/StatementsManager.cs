@@ -9,4 +9,9 @@ public class StatementsManager : Singleton<StatementsManager> {
         if(statement.TryStatement())
             Debug.Log("YEE");
     }
+
+    public void UpdateStatement(Statement statement)
+    {
+
+    }
 }

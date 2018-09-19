@@ -1,36 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class ObjectHandler : MonoBehaviour {
 
     public float initVelocity;
     public float finalVelocity; 
     public float grabDistance;
-    public float dropForce; 
+    public float dropForce;
+    public float repelCountdown; 
     public float throwForce;
+    public Transform raycastOrigin;
     public Transform heldPosition;
     public ForceMode throwForceMode;
     public LayerMask layerMask = -1; 
     private Transform destination;
-
+    public float timeLeft; 
     private GameObject heldObject;
     public bool pickedUp; 
 	void Start () {
 
         heldObject = null;
-        pickedUp = false; 
+        pickedUp = false;
+        timeLeft = repelCountdown;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-       
+
+        var controllerEvents = GetComponent<VRTK_ControllerEvents>();
+
         if(heldObject != null)
         {
            if(heldObject.transform.position != heldPosition.transform.position)
             {
                 pickedUp = true; 
-                heldObject.transform.position = Vector3.Lerp(heldObject.transform.position, heldPosition.transform.position, Mathf.Lerp(initVelocity, finalVelocity, Time.deltaTime)); 
+                heldObject.transform.position = Vector3.Lerp(heldObject.transform.position, heldPosition.transform.position, Mathf.Lerp(initVelocity, finalVelocity, Time.deltaTime));
+
+                timeLeft -= Time.deltaTime; 
             }
 
            else
@@ -45,9 +53,12 @@ public class ObjectHandler : MonoBehaviour {
         {
             PickUpObject(); 
         }
-        if(Input.GetMouseButtonDown(1) && (pickedUp))//heldObject.transform.position == heldPosition.transform.position))
+        if(Input.GetMouseButtonDown(1) && (pickedUp))
         {
+           if(timeLeft< 0)
+            {
                 RepelObject();
+            }
         }
 
         else if(Input.GetMouseButtonDown(0) && pickedUp)
@@ -58,21 +69,25 @@ public class ObjectHandler : MonoBehaviour {
 
     public void PickUpObject()
     {
-        if(heldObject == null)
+        if(!pickedUp)
         {
-            RaycastHit hit;
-
-            if (Physics.Raycast(transform.position, transform.forward, out hit, grabDistance, layerMask) &&
-                hit.transform.gameObject.GetComponent<InteractableObject>().liftable)
+            if(heldObject == null)
             {
-                Debug.DrawRay(transform.position, transform.forward * 1000, Color.yellow, 1000);
-                heldObject = hit.collider.gameObject;
-                heldObject.GetComponent<Rigidbody>().isKinematic = true;
+                RaycastHit hit;
 
-            }
-            else
-            {
-                Debug.DrawRay(transform.position, transform.forward * 1000, Color.red, 1000);
+                if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hit, grabDistance, layerMask) &&
+                    hit.transform.gameObject.GetComponent<InteractableObject>().liftable)
+                {
+                    Debug.DrawRay(raycastOrigin.position, raycastOrigin.forward * 1000, Color.yellow, 1000);
+                    heldObject = hit.collider.gameObject;
+                    heldObject.GetComponent<Rigidbody>().isKinematic = true;
+
+                }
+                else
+                {
+                    Debug.DrawRay(raycastOrigin.position, raycastOrigin.forward * 1000, Color.red, 1000);
+                }
+
             }
 
         }
@@ -80,20 +95,28 @@ public class ObjectHandler : MonoBehaviour {
 
     public void RepelObject()
     {
-        Rigidbody body = heldObject.GetComponent<Rigidbody>();
-        body.isKinematic = false;
-        body.AddForce(throwForce * transform.forward, throwForceMode);
-        heldObject = null;
-        pickedUp = false; 
+        if (pickedUp)
+        {
+            Rigidbody body = heldObject.GetComponent<Rigidbody>();
+            body.isKinematic = false;
+            body.AddForce(throwForce * transform.forward, throwForceMode);
+            heldObject = null;
+            pickedUp = false;
+            timeLeft = repelCountdown;
+        }
     }
 
     public void DropObject()
     {
-        Rigidbody body = heldObject.GetComponent<Rigidbody>();
-        body.isKinematic = false;
-        body.AddForce(dropForce * transform.forward, throwForceMode);
-        heldObject = null;
-        pickedUp = false;
+        if(pickedUp)
+        {
+            Rigidbody body = heldObject.GetComponent<Rigidbody>();
+            body.isKinematic = false;
+            body.AddForce(dropForce * transform.forward, throwForceMode);
+            heldObject = null;
+            pickedUp = false;
+
+        }
     }
 
 
