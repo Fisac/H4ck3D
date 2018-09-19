@@ -85,20 +85,20 @@ public class InteractableObject : MonoBehaviour {
         {
             liftable = false;
             //vrtkInteractable.isGrabbable = false;
-            objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+            //objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         }
         else
         {
             liftable = true;
             //vrtkInteractable.isGrabbable = true;
-            objectRigidbody.useGravity = true;
+            //objectRigidbody.useGravity = true;
         }
         
         if (!matter.isPhysical)
         {
             liftable = false;
             //vrtkInteractable.isGrabbable = false;
-            objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+            //objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
 
             if (matter.name=="Hologram")
             {

@@ -19,7 +19,7 @@ public class Door : MonoBehaviour
         doorStop = doorTransform.position.z - 0.1f;
     }
 
-    void OpenDoor()
+    public void OpenDoor()
     {
         lerpTime += 0.5f * Time.deltaTime;
         doorTransform.position = new Vector3(doorTransform.position.x, doorTransform.position.y, Mathf.Lerp(doorStart, doorStop, lerpTime));

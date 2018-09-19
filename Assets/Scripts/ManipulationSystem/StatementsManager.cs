@@ -5,6 +5,7 @@ using UnityEngine;
 public class StatementsManager : Singleton<StatementsManager> {
 
     public Statement[] statements;
+    public Door door;
 
     public void CheckStatement()
     {
@@ -17,7 +18,8 @@ public class StatementsManager : Singleton<StatementsManager> {
         }
 
         if (levelCompleted)
-            Debug.Log("I COMPLETED THE LEVEL");
+            door.OpenDoor();
+
     }
 
     public void UpdateStatement(Statement statement)
