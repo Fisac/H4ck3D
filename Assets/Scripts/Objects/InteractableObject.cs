@@ -94,13 +94,13 @@ public class InteractableObject : MonoBehaviour {
         if (mass > maximumLiftWeight)
         {
             liftable = false;
-            vrtkInteractable.isGrabbable = false;
+            //vrtkInteractable.isGrabbable = false;
             objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         }
         else
         {
             liftable = true;
-            vrtkInteractable.isGrabbable = true;
+            //vrtkInteractable.isGrabbable = true;
             objectRigidbody.useGravity = true;
         }
 
@@ -108,7 +108,7 @@ public class InteractableObject : MonoBehaviour {
         if (!matter.isPhysical)
         {
             liftable = false;
-            vrtkInteractable.isGrabbable = false;
+            //vrtkInteractable.isGrabbable = false;
             objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
 
             if (matter.name=="Hologram")
