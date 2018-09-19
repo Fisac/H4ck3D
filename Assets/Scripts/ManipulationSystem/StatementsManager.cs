@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class StatementsManager : Singleton<StatementsManager> {
 
-    public void CheckStatement(Statement statement)
+    public Statement[] statements;
+
+    public void CheckStatement()
     {
-        if(statement.TryStatement())
-            Debug.Log("YEE");
+        bool levelCompleted = true;
+
+        foreach (var statement in statements)
+        {
+            if (!statement.TryStatement())
+                levelCompleted = false;
+        }
+
+        if (levelCompleted)
+            Debug.Log("I COMPLETED THE LEVEL");
     }
 
     public void UpdateStatement(Statement statement)

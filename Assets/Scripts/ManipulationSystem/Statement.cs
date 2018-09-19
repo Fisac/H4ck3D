@@ -14,7 +14,7 @@ public class Statement : MonoBehaviour {
             ApplySelfToManipulatable();
     }
 
-    private void ApplySelfToManipulatable()
+    public void ApplySelfToManipulatable()
     {
         manipulatable.statement = this;
     }
@@ -26,6 +26,7 @@ public class Statement : MonoBehaviour {
 
     private bool CheckConditions()
     {
+        Debug.Log("CHECKING CONDITIONS START");
         if (!TryCondition(destroyCondition, manipulatable.destroyed))
             return false;
 
@@ -34,6 +35,8 @@ public class Statement : MonoBehaviour {
 
         if (!TryCondition(airborneCondition, manipulatable.airborne))
             return false;
+
+        Debug.Log("CHECKING CONDITIONS END");
 
         return true;
     }

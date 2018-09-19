@@ -63,7 +63,7 @@ public class Manipulatable : MonoBehaviour {
     public void UpdateValues()
     {
         if(statement != null)
-            StatementsManager.Instance.CheckStatement(statement);
+            StatementsManager.Instance.CheckStatement();
     }
 
     private void OnCollisionEnter(Collision collision)
