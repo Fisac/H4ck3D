@@ -28,8 +28,6 @@ public class InteractableObject : MonoBehaviour {
     public float highestVelocity;
     float acceleration;
 
-    bool newMatter;
-
     private void Awake()
     {
         objectTransform = GetComponent<Transform>();
@@ -45,14 +43,6 @@ public class InteractableObject : MonoBehaviour {
         UpdateProperties();
     }
 
-    void Update()
-    {
-        if (newMatter)
-        {
-            UpdateProperties();
-        }
-    }
-
     void FixedUpdate()
     {
         //Advanced force calculation.....................................
@@ -65,10 +55,10 @@ public class InteractableObject : MonoBehaviour {
         //force = mass * highestVelocity;
     }
 
-    void UpdateMatter(Matter matter)
+    public void UpdateMatter(Matter matter)
     {
-        matter = this.matter;
-        newMatter = true;
+        this.matter = matter;
+        UpdateProperties();
     }
 
     void UpdateProperties()
@@ -82,13 +72,13 @@ public class InteractableObject : MonoBehaviour {
 
         MassCalculation();
 
-        Debug.Log("Object name: " + thisGameObject.name);
-        Debug.Log("Matter: " + matter.name);
-        Debug.Log("Mass: " + mass);
-        Debug.Log("Friction multiplier: " + matter.frictionMultiplier);
-        Debug.Log("Is physical: " + matter.isPhysical);
-        Debug.Log("Is destructable: " + matter.isDestructable);
-        Debug.Log("Is physical: " + matter.isPhysical);
+        //Debug.Log("Object name: " + thisGameObject.name);
+        //Debug.Log("Matter: " + matter.name);
+        //Debug.Log("Mass: " + mass);
+        //Debug.Log("Friction multiplier: " + matter.frictionMultiplier);
+        //Debug.Log("Is physical: " + matter.isPhysical);
+        //Debug.Log("Is destructable: " + matter.isDestructable);
+        //Debug.Log("Is physical: " + matter.isPhysical);
 
         //MaximumLiftWeight check
         if (mass > maximumLiftWeight)
@@ -103,8 +93,7 @@ public class InteractableObject : MonoBehaviour {
             //vrtkInteractable.isGrabbable = true;
             objectRigidbody.useGravity = true;
         }
-
-        //Is it physical?
+        
         if (!matter.isPhysical)
         {
             liftable = false;
@@ -121,8 +110,6 @@ public class InteractableObject : MonoBehaviour {
                 objectCollider.isTrigger = false;
             }
         }
-        newMatter = false;
-        Debug.Log("newMatter: " + newMatter);
     }
     //Volume and mass calculation
     void MassCalculation()

@@ -47,6 +47,7 @@ public class ArmUIInteraction : MonoBehaviour {
         if (isDraggingUI == false)
             return;
 
+        Debug.Log("Step 1");
         DetectObjectRaycast();
 
         isDraggingUI = false;
@@ -54,26 +55,36 @@ public class ArmUIInteraction : MonoBehaviour {
 
     public void DetectObjectRaycast()
     {
+        Debug.Log("Step 2");
         RaycastHit hit;
         Ray ray = new Ray(raycastOrigin.position, raycastOrigin.forward);
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
+            Debug.Log("Step 3");
             GameObject hitObject = hit.collider.gameObject;
             Manipulatable objectManipulatable = hitObject.GetComponent<Manipulatable>();
+            InteractableObject interactableObject = hitObject.GetComponent<InteractableObject>();
+            MonitorMatter monitorMatter = currentUIElement.GetComponent<MonitorMatter>();
             MonitorObject monitorObject = currentUIElement.GetComponent<MonitorObject>();
 
             if (objectManipulatable != null && monitorObject != null)
             {
+                Debug.Log("Step 4a");
                 selectedWorldObject = hit.collider.gameObject;
 
                 monitorObject.currentManipulatable = objectManipulatable;
                 monitorObject.UpdateStatement();
 
                 SetUIObjectName(selectedWorldObject.name);
-                //Apply currentUIElement.matter.material to hitObject.InteractableObject.matter
-
-                //hitObject.GetComponent<InteractableObject>().matter.matterMaterial = currentUIElement.matter.matterMaterial;
+            }
+            else if (interactableObject != null && monitorMatter != null)
+            {
+                Debug.Log("Step 4b");
+                Debug.Log(monitorMatter.matter);
+                //interactableObject.matter.matterMaterial = monitorMatter.matter.matterMaterial;
+                interactableObject.UpdateMatter(monitorMatter.matter);
+                
             }
         }
     }
