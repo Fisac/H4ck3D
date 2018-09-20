@@ -49,6 +49,10 @@ public class InteractableObject : MonoBehaviour {
         highestVelocity = Mathf.Max(Mathf.Abs(objectRigidbody.velocity.x), Mathf.Abs(objectRigidbody.velocity.y), Mathf.Abs(objectRigidbody.velocity.z));
         acceleration = highestVelocity / Time.fixedDeltaTime;
         force = mass * acceleration;
+        if (force > 1)
+        {
+            Debug.Log("Force of " + thisGameObject.name + " is: " + force);
+        }
 
         //Simplified force calculation...................................
         //highestVelocity = Mathf.Max(Mathf.Abs(objectRigidbody.velocity.x), Mathf.Abs(objectRigidbody.velocity.y), Mathf.Abs(objectRigidbody.velocity.z));
