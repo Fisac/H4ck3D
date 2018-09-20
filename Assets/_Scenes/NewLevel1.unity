@@ -429,7 +429,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 8ba392dd078919d4996767a55784fc00, type: 2}
+  - {fileID: 2100000, guid: 2f764c7e9c8cead4f883a3ffaff5e847, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -919,6 +919,16 @@ Prefab:
         type: 2}
       propertyPath: m_HDR
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20660378993139002, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+        type: 2}
+      propertyPath: near clip plane
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 20660378993139002, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+        type: 2}
+      propertyPath: m_HDR
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114922858821884284, guid: 04cb25cd00dc2784b98bdb658ee87ab3, type: 2}
@@ -1741,7 +1751,7 @@ Prefab:
         type: 2}
       propertyPath: matter
       value: 
-      objectReference: {fileID: 11400000, guid: e92d05b5d13610043842cc3c4352978d,
+      objectReference: {fileID: 11400000, guid: d852cfdfb36ff5b4f875eb4e5ae87743,
         type: 2}
     - target: {fileID: 23233574208203778, guid: ab5443fa4bd9e294883d5f9e0e56de23,
         type: 2}
