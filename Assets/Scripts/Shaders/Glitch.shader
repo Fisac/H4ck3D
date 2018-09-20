@@ -48,6 +48,8 @@
 			{
 				v2f o; 
 				o.vertex.x += sin(_Time.y * _Speed + v.vertex.y * _Amplitude) *_Distance * _Amount;
+				o.vertex = UnityObjectToClipPos(v.vertex)
+				o.uv = TRANSFORM_TEX(v.uv, _MainTex)
 			}
 		}
 	}
