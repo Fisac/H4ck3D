@@ -472,18 +472,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e9beb7e1b41c74dbf2b20c3b335d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initVelocity: 0
-  finalVelocity: 10
-  grabDistance: 10
-  dropForce: 1
-  repelCountdown: 0.5
-  throwForce: 30
+  particleManager: {fileID: 0}
   raycastOrigin: {fileID: 1389796643}
   heldPosition: {fileID: 1389796643}
   throwForceMode: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  initialVelocity: 0
+  finalVelocity: 10
+  grabDistance: 10
+  dropForce: 1
+  repelCountdown: 0.5
+  throwForce: 30
   timeLeft: 0
   pickedUp: 0
 --- !u!1 &260238899
@@ -1751,7 +1752,7 @@ Prefab:
         type: 2}
       propertyPath: matter
       value: 
-      objectReference: {fileID: 11400000, guid: d852cfdfb36ff5b4f875eb4e5ae87743,
+      objectReference: {fileID: 11400000, guid: e92d05b5d13610043842cc3c4352978d,
         type: 2}
     - target: {fileID: 23233574208203778, guid: ab5443fa4bd9e294883d5f9e0e56de23,
         type: 2}
