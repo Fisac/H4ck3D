@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ArmUIInteraction : MonoBehaviour {
 
     public VRTK.VRTK_UIPointer uiPointer;
+    public ArmUIManager armUIManager;
     public Transform raycastOrigin;
     public GameObject currentUIElement, selectedUIElement, selectedWorldObject;
     public bool isDraggingUI;
@@ -33,6 +34,11 @@ public class ArmUIInteraction : MonoBehaviour {
         if(uiPointer.pointerEventData.pointerDrag != null)
         {
             currentUIElement = uiPointer.pointerEventData.pointerDrag;
+            armUIManager.canDisable = false;
+        }
+        else
+        {
+            armUIManager.canDisable = true;
         }
 	}
     //TODO Make it so currentObject can be assigned from world objects.

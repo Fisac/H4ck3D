@@ -201,12 +201,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &503504920 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114968601318155028, guid: ab5443fa4bd9e294883d5f9e0e56de23,
-    type: 2}
-  m_PrefabInternal: {fileID: 972633981}
-  m_Script: {fileID: 11500000, guid: a76362ee3568a4944aeddcd8c9ce3248, type: 3}
 --- !u!1 &616031462
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +539,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114086885358425844, guid: ab5443fa4bd9e294883d5f9e0e56de23,
+        type: 2}
+      propertyPath: vrCamera
+      value: 
+      objectReference: {fileID: 874072122}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
   m_IsPrefabAsset: 0
@@ -594,7 +593,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 2fc2c31276f37d344b84fbd5fb35408a, type: 2}
+  - {fileID: 2100000, guid: f1ce015fe2ae86b4ab51fdf2865de2d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -627,13 +626,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1174840030}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7039995, y: 1.301, z: 0}
+  m_LocalRotation: {x: -0.13430224, y: -0.12823267, z: 0.59992737, w: -0.77820724}
+  m_LocalPosition: {x: 3.7039995, y: 1.301, z: -0.0000000075185165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -201.278, y: 182.364, z: 825.186}
 --- !u!114 &1174840035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,8 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce54b3bef8369d4fbcbe2a6f757c9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyed: {fileID: 1603204704772018, guid: cd09aabdf57daf1488ebf4bc0f2be4fb, type: 2}
-  interactableObject: {fileID: 503504920}
+  glassShards: {fileID: 0}
   mesh: {fileID: 1174840032}
 --- !u!1 &1430838030
 GameObject:
@@ -726,13 +724,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430838030}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.6897365, y: -0, z: -0, w: 0.72406054}
   m_LocalPosition: {x: 4.307, y: 1.15, z: -3.366133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 87.219, y: 0, z: 0}
 --- !u!1 &1571114382
 GameObject:
   m_ObjectHideFlags: 0
