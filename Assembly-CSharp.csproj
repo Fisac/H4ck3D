@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\ManipulationSystem\MaterialManager.cs" />
     <Compile Include="Assets\Scripts\ManipulationSystem\Statement.cs" />
     <Compile Include="Assets\Scripts\ManipulationSystem\StatementsManager.cs" />
+    <Compile Include="Assets\Scripts\MaterialCube.cs" />
     <Compile Include="Assets\Scripts\MaterialTest.cs" />
     <Compile Include="Assets\Scripts\Matter.cs" />
     <Compile Include="Assets\Scripts\MonitorMatter.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\Scripts\Objects\LocalScaling.cs" />
     <Compile Include="Assets\Scripts\Objects\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\Objects\UIPopup.cs" />
+    <Compile Include="Assets\Scripts\ParticleManager.cs" />
     <Compile Include="Assets\Scripts\SceneSwitch.cs" />
     <Compile Include="Assets\Scripts\TestFlipMaterial.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\ArmUIInteraction.cs" />
