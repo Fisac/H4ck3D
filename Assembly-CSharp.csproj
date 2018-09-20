@@ -76,15 +76,19 @@
     <Compile Include="Assets\Scripts\ManipulationSystem\StatementsManager.cs" />
     <Compile Include="Assets\Scripts\MaterialTest.cs" />
     <Compile Include="Assets\Scripts\Matter.cs" />
+    <Compile Include="Assets\Scripts\MonitorMatter.cs" />
     <Compile Include="Assets\Scripts\ObjectHandler.cs" />
     <Compile Include="Assets\Scripts\Objects\Door.cs" />
     <Compile Include="Assets\Scripts\Objects\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\Objects\LocalScaling.cs" />
     <Compile Include="Assets\Scripts\Objects\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\Objects\UIPopup.cs" />
+    <Compile Include="Assets\Scripts\SceneSwitch.cs" />
     <Compile Include="Assets\Scripts\TestFlipMaterial.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\ArmUIInteraction.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\ArmUIManager.cs" />
+    <Compile Include="Assets\Scripts\WristMonitor\MonitorObject.cs" />
+    <Compile Include="Assets\Scripts\WristMonitor\MonitorStatement.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\WristMonitor.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
@@ -551,6 +555,7 @@
     <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\Unlit_TransparentColor.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_ColorOut.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
+    <None Include="Assets\Scripts\Shaders\Glitch.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Readme_InteractionSystem.txt" />
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>C:/Users/soula/Documents/GitHub/GitTesting/H4ck3D/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
