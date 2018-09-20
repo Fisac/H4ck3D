@@ -5,21 +5,27 @@ using VRTK;
 
 public class ObjectHandler : MonoBehaviour {
 
-    public float initVelocity;
-    public float finalVelocity; 
-    public float grabDistance;
-    public float dropForce;
-    public float repelCountdown; 
-    public float throwForce;
+    public ParticleManager particleManager;
     public Transform raycastOrigin;
     public Transform heldPosition;
     public ForceMode throwForceMode;
     public LayerMask layerMask = -1; 
     private Transform destination;
-    public float timeLeft; 
+
+    public float initialVelocity;
+    public float finalVelocity; 
+    public float grabDistance;
+    public float dropForce;
+    public float repelCountdown; 
+    public float throwForce;
+    [HideInInspector]
+    public float timeLeft;
+    
     private GameObject heldObject;
     public bool pickedUp; 
+
 	void Start () {
+        particleManager = GetComponent<ParticleManager>();
 
         heldObject = null;
         pickedUp = false;
@@ -35,15 +41,19 @@ public class ObjectHandler : MonoBehaviour {
         {
            if(heldObject.transform.position != heldPosition.transform.position)
             {
+                particleManager.pull.Play();
                 pickedUp = true; 
-                heldObject.transform.position = Vector3.Lerp(heldObject.transform.position, heldPosition.transform.position, Mathf.Lerp(initVelocity, finalVelocity, Time.deltaTime));
+                heldObject.transform.position = Vector3.Lerp(heldObject.transform.position, heldPosition.transform.position, Mathf.Lerp(initialVelocity, finalVelocity, Time.deltaTime));
 
-                timeLeft -= Time.deltaTime; 
+                timeLeft -= Time.deltaTime;
+                if (heldObject.transform.position == heldPosition.transform.position)
+                {
+                    particleManager.pull.Stop();
+                }
             }
 
            else
             {
-
                 heldObject.transform.position = heldPosition.position;
                  heldObject.transform.rotation = heldPosition.rotation;
             }
@@ -55,7 +65,7 @@ public class ObjectHandler : MonoBehaviour {
         }
         if(Input.GetMouseButtonDown(1) && (pickedUp))
         {
-           if(timeLeft< 0)
+           if(timeLeft <= 0)
             {
                 RepelObject();
             }
@@ -81,15 +91,12 @@ public class ObjectHandler : MonoBehaviour {
                     Debug.DrawRay(raycastOrigin.position, raycastOrigin.forward * 1000, Color.yellow, 1000);
                     heldObject = hit.collider.gameObject;
                     heldObject.GetComponent<Rigidbody>().isKinematic = true;
-
                 }
                 else
                 {
                     Debug.DrawRay(raycastOrigin.position, raycastOrigin.forward * 1000, Color.red, 1000);
                 }
-
             }
-
         }
     }
 
@@ -97,6 +104,7 @@ public class ObjectHandler : MonoBehaviour {
     {
         if (pickedUp)
         {
+            particleManager.push.Emit(30);
             Rigidbody body = heldObject.GetComponent<Rigidbody>();
             body.isKinematic = false;
             body.AddForce(throwForce * transform.forward, throwForceMode);
@@ -110,14 +118,12 @@ public class ObjectHandler : MonoBehaviour {
     {
         if(pickedUp)
         {
+            particleManager.drop.Emit(15);
             Rigidbody body = heldObject.GetComponent<Rigidbody>();
             body.isKinematic = false;
             body.AddForce(dropForce * transform.forward, throwForceMode);
             heldObject = null;
             pickedUp = false;
-
         }
     }
-
-
 }
