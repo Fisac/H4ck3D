@@ -939,17 +939,22 @@ Prefab:
     - target: {fileID: 20088969100018770, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
         type: 2}
       propertyPath: far clip plane
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 20660378993139002, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
         type: 2}
       propertyPath: m_Depth
-      value: -1
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 20660378993139002, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
         type: 2}
       propertyPath: far clip plane
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 20088969100018770, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+        type: 2}
+      propertyPath: m_Depth
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114922858821884284, guid: 04cb25cd00dc2784b98bdb658ee87ab3, type: 2}
