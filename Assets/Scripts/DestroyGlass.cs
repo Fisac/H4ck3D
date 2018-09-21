@@ -16,18 +16,6 @@ public class DestroyGlass : MonoBehaviour {
 
     public void DestroyTheGlass()
     {
-        Debug.Log("DestroyTheGlass");
-        //if (Mathf.RoundToInt(interactableObject.boxVolume) < 2)
-        //{
-        //    objectNumber = 1;
-        //}
-        //else
-        //{
-        //    objectNumber = 2;
-        //}
-        //Debug.Log("objectNumber: " + objectNumber);
-
-        Debug.Break();
         for (int i = 0; i <= objectNumber; i++)
         { 
             Instantiate(glassShards, transform.position, transform.rotation);

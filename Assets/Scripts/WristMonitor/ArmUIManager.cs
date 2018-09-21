@@ -6,11 +6,14 @@ using UnityEngine;
 public class ArmUIManager : MonoBehaviour {
 
     public Canvas armUICanvas;
+    public ArmUIInteraction armUIInteraction;
     public CapsuleCollider smallCollider, bigCollider;
-    public bool canDisable;
 
     private void Awake()
     {
+        if (armUIInteraction == null)
+            armUIInteraction = FindObjectOfType<ArmUIInteraction>();
+
         if (smallCollider == null || bigCollider == null)
             Debug.LogError("CHECK SMALL AND BIG COLLIDER ON ARMUIMANAGER!");
     }
@@ -24,17 +27,12 @@ public class ArmUIManager : MonoBehaviour {
 
     public void DisableMonitor()
     {
-        if (!canDisable)
+        if (armUIInteraction.state == InteractionStates.Dragging)
             return;
 
         armUICanvas.gameObject.SetActive(false);
         smallCollider.enabled = true;
         bigCollider.enabled = false;
-    }
-
-    public void SetCanDisable(bool value)
-    {
-        canDisable = value;
     }
 
     void OnTriggerEnter(Collider other)
