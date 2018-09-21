@@ -14,6 +14,11 @@ public class MonitorStatement : MonoBehaviour {
     const string notMoving = "!Moving";
     const string notDestroyed = "!Destroyed";
 
+    const string materialDefault = "Default";
+    const string materialGlass = "Glass";
+    const string materialHologram = "Hologram";
+    const string materialMetal = "Metal";
+
     public Statement statement;
     public MonitorObject monitorObject;
     public Text textA;
@@ -44,6 +49,7 @@ public class MonitorStatement : MonoBehaviour {
             case destroyed:
                 statement.destroyCondition = Conditions.True;
                 break;
+
             case notAirborne:
                 statement.airborneCondition = Conditions.False;
                 break;
@@ -52,6 +58,19 @@ public class MonitorStatement : MonoBehaviour {
                 break;
             case notDestroyed:
                 statement.destroyCondition = Conditions.False;
+                break;
+
+            case materialDefault:
+                statement.matter.name = materialDefault;
+                break;
+            case materialGlass:
+                statement.matter.name = materialGlass;
+                break;
+            case materialHologram:
+                statement.matter.name = materialHologram;
+                break;
+            case materialMetal:
+                statement.matter.name = materialMetal;
                 break;
             default:
                 break;
@@ -63,5 +82,6 @@ public class MonitorStatement : MonoBehaviour {
         statement.airborneCondition = Conditions.Ignore;
         statement.movingCondition = Conditions.Ignore;
         statement.destroyCondition = Conditions.Ignore;
+        statement.matter.name = "";
     }
 }

@@ -21,8 +21,6 @@ public class WristMonitor : MonoBehaviour {
             {
                 ifStatements[i].textA.text = statements[i].manipulatable.gameObject.name;
             }
-            //String conditionsString = ConstructConditionString(i);
-            //ifStatements[i].textB.text = conditionsString;
         }
     }
 

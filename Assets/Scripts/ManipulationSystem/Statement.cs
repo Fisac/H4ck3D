@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,15 @@ public class Statement : MonoBehaviour {
     public Manipulatable manipulatable;
 
     public Conditions destroyCondition, movingCondition, airborneCondition;
+    public Matter matter;
+
+    private void Awake()
+    {
+        if(matter == null)
+        {
+            matter = new Matter();
+        }
+    }
 
     private void Start()
     {
@@ -21,12 +31,50 @@ public class Statement : MonoBehaviour {
 
     public bool TryStatement()
     {
-        return CheckConditions();
+        if (CheckingForMaterial())
+        {
+            return CheckMaterial();
+        }
+        else
+        {
+            return CheckConditions();
+        }
+    }
+
+    private bool CheckingForMaterial()
+    {
+        if (destroyCondition == Conditions.Ignore &&
+            movingCondition == Conditions.Ignore &&
+            airborneCondition == Conditions.Ignore)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+    private bool CheckMaterial()
+    {
+        InteractableObject interactableObject = manipulatable.GetComponent<InteractableObject>();
+
+        if (interactableObject == null || matter == null)
+            return false;
+
+        if (interactableObject.matter.name == matter.name)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     private bool CheckConditions()
     {
-        Debug.Log("CHECKING CONDITIONS START");
         if (!TryCondition(destroyCondition, manipulatable.destroyed))
             return false;
 
@@ -35,8 +83,6 @@ public class Statement : MonoBehaviour {
 
         if (!TryCondition(airborneCondition, manipulatable.airborne))
             return false;
-
-        Debug.Log("CHECKING CONDITIONS END");
 
         return true;
     }
