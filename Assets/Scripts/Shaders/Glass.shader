@@ -17,7 +17,7 @@
 		Pass
 	{
 		Cull Off
-		ZWrite Off
+		ZWrite On
 		Blend SrcAlpha OneMinusSrcAlpha
 
 		CGPROGRAM
