@@ -931,6 +931,26 @@ Prefab:
       propertyPath: m_HDR
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 20088969100018770, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+        type: 2}
+      propertyPath: near clip plane
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20088969100018770, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+        type: 2}
+      propertyPath: far clip plane
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20660378993139002, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+        type: 2}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20660378993139002, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+        type: 2}
+      propertyPath: far clip plane
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114922858821884284, guid: 04cb25cd00dc2784b98bdb658ee87ab3, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 04cb25cd00dc2784b98bdb658ee87ab3, type: 2}
@@ -1054,6 +1074,7 @@ MonoBehaviour:
   destroyCondition: 1
   movingCondition: 0
   airborneCondition: 0
+  matter: {fileID: 0}
 --- !u!4 &875420871
 Transform:
   m_ObjectHideFlags: 0
@@ -1757,7 +1778,7 @@ Prefab:
         type: 2}
       propertyPath: matter
       value: 
-      objectReference: {fileID: 11400000, guid: e92d05b5d13610043842cc3c4352978d,
+      objectReference: {fileID: 11400000, guid: d852cfdfb36ff5b4f875eb4e5ae87743,
         type: 2}
     - target: {fileID: 23233574208203778, guid: ab5443fa4bd9e294883d5f9e0e56de23,
         type: 2}
