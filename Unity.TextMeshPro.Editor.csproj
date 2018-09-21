@@ -415,6 +415,7 @@
   <ItemGroup>
     <None Include="Assets\Scripts\Shaders\Bloom.shader" />
     <None Include="Assets\Scripts\Shaders\Glass.shader" />
+    <None Include="Assets\Scripts\Shaders\Glitch.shader" />
     <None Include="Assets\Scripts\Shaders\Grid.shader" />
     <None Include="Assets\Scripts\Shaders\MatrixEffect.shader" />
     <None Include="Assets\Scripts\Shaders\Wireframe.shader" />
