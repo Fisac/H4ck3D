@@ -15,26 +15,18 @@ public class ForceCheck : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        //if (!other.transform.GetComponentInChildren<InteractableObject>())
-        //{
-        //    return;
-        //}
+        InteractableObject otherInteractableObject = other.transform.GetComponentInChildren<InteractableObject>();
 
-        if (!other.transform.GetComponentInChildren<InteractableObject>() && interactableObject.force > interactableObject.matter.breakingPoint && interactableObject.matter.isDestructable)
+        if (!otherInteractableObject && interactableObject.force > interactableObject.matter.breakingPoint && interactableObject.matter.isDestructable)
         {
-            Debug.Break();
             destroyGlass.DestroyTheGlass();
         }
-        else if (other.transform.GetComponentInChildren<InteractableObject>().force > interactableObject.matter.breakingPoint && interactableObject.matter.isDestructable)
+        else if (otherInteractableObject && otherInteractableObject.force > interactableObject.matter.breakingPoint && interactableObject.matter.isDestructable)
         {
-            Debug.Break();
-
             destroyGlass.DestroyTheGlass();
         }
-        else if (other.transform.GetComponentInChildren<InteractableObject>() && interactableObject.force > interactableObject.matter.breakingPoint && interactableObject.matter.isDestructable)
+        else if (otherInteractableObject && interactableObject.force > interactableObject.matter.breakingPoint && interactableObject.matter.isDestructable)
         {
-            Debug.Break();
-
             destroyGlass.DestroyTheGlass();
         }
         else
