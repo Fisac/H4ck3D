@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class DestroyGlass : MonoBehaviour {
 
     private int objectNumber = 1;
     public GameObject glassShards;
     InteractableObject interactableObject;
     public MeshRenderer mesh;
+    public SoundManager soundManager;
 
     private void Start()
     {
@@ -21,5 +23,6 @@ public class DestroyGlass : MonoBehaviour {
             Instantiate(glassShards, transform.position, transform.rotation);
         }
         mesh.enabled = false;
+        soundManager.PlaySound("Element 1");
     }
 }
