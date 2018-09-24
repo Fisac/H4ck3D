@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 1107154010517284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4744098154955188}
   m_RootOrder: 0
@@ -538,9 +538,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a76362ee3568a4944aeddcd8c9ce3248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matter: {fileID: 11400000, guid: 091c41536ff0edc4f8a46b1a95018840, type: 2}
+  matter: {fileID: 11400000, guid: d852cfdfb36ff5b4f875eb4e5ae87743, type: 2}
   matters: []
   thisGameObject: {fileID: 1107154010517284}
+  liftable: 0
   mass: 0
   maximumLiftWeight: 4
   boxVolume: 0

@@ -25,7 +25,7 @@ public class ObjectHandler : MonoBehaviour {
     public bool pickedUp; 
 
 	void Start () {
-        particleManager = GetComponent<ParticleManager>();
+        //particleManager = GetComponent<ParticleManager>();
 
         heldObject = null;
         pickedUp = false;
@@ -41,15 +41,11 @@ public class ObjectHandler : MonoBehaviour {
         {
            if(heldObject.transform.position != heldPosition.transform.position)
             {
-                particleManager.pull.Play();
                 pickedUp = true; 
                 heldObject.transform.position = Vector3.Lerp(heldObject.transform.position, heldPosition.transform.position, Mathf.Lerp(initialVelocity, finalVelocity, Time.deltaTime));
 
                 timeLeft -= Time.deltaTime;
-                if (heldObject.transform.position == heldPosition.transform.position)
-                {
-                    particleManager.pull.Stop();
-                }
+
             }
 
            else
@@ -79,7 +75,10 @@ public class ObjectHandler : MonoBehaviour {
 
     public void PickUpObject()
     {
-        if(!pickedUp)
+        particleManager.pull.gameObject.SetActive(true);
+        particleManager.pull.Play();
+
+        if (!pickedUp)
         {
             if(heldObject == null)
             {
@@ -102,12 +101,16 @@ public class ObjectHandler : MonoBehaviour {
 
     public void RepelObject()
     {
+        particleManager.pull.gameObject.SetActive(true);
+        particleManager.pull.Stop();
+
         if (pickedUp)
         {
+            particleManager.push.gameObject.SetActive(true);
             particleManager.push.Emit(30);
             Rigidbody body = heldObject.GetComponent<Rigidbody>();
             body.isKinematic = false;
-            body.AddForce(throwForce * transform.forward, throwForceMode);
+            body.AddForce(throwForce * raycastOrigin.transform.forward, throwForceMode);
             heldObject = null;
             pickedUp = false;
             timeLeft = repelCountdown;
@@ -116,12 +119,16 @@ public class ObjectHandler : MonoBehaviour {
 
     public void DropObject()
     {
-        if(pickedUp)
+        particleManager.pull.gameObject.SetActive(true);
+        particleManager.pull.Stop();
+
+        if (pickedUp)
         {
+            particleManager.drop.gameObject.SetActive(true);
             particleManager.drop.Emit(15);
             Rigidbody body = heldObject.GetComponent<Rigidbody>();
             body.isKinematic = false;
-            body.AddForce(dropForce * transform.forward, throwForceMode);
+            body.AddForce(dropForce * raycastOrigin.forward, throwForceMode);
             heldObject = null;
             pickedUp = false;
         }
