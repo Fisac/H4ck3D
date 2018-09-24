@@ -45,18 +45,9 @@ public class InteractableObject : MonoBehaviour {
 
     void FixedUpdate()
     {
-        //Advanced force calculation.....................................
         highestVelocity = Mathf.Max(Mathf.Abs(objectRigidbody.velocity.x), Mathf.Abs(objectRigidbody.velocity.y), Mathf.Abs(objectRigidbody.velocity.z));
         acceleration = highestVelocity / Time.fixedDeltaTime;
         force = mass * acceleration;
-        if (force > 1)
-        {
-            Debug.Log("Force of " + thisGameObject.name + " is: " + force);
-        }
-
-        //Simplified force calculation...................................
-        //highestVelocity = Mathf.Max(Mathf.Abs(objectRigidbody.velocity.x), Mathf.Abs(objectRigidbody.velocity.y), Mathf.Abs(objectRigidbody.velocity.z));
-        //force = mass * highestVelocity;
     }
 
     public void UpdateMatter(Matter matter)
@@ -76,33 +67,18 @@ public class InteractableObject : MonoBehaviour {
 
         MassCalculation();
 
-        //Debug.Log("Object name: " + thisGameObject.name);
-        //Debug.Log("Matter: " + matter.name);
-        //Debug.Log("Mass: " + mass);
-        //Debug.Log("Friction multiplier: " + matter.frictionMultiplier);
-        //Debug.Log("Is physical: " + matter.isPhysical);
-        //Debug.Log("Is destructable: " + matter.isDestructable);
-        //Debug.Log("Is physical: " + matter.isPhysical);
-
-        //MaximumLiftWeight check
         if (mass > maximumLiftWeight)
         {
             liftable = false;
-            //vrtkInteractable.isGrabbable = false;
-            //objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         }
         else
         {
             liftable = true;
-            //vrtkInteractable.isGrabbable = true;
-            //objectRigidbody.useGravity = true;
         }
         
         if (!matter.isPhysical)
         {
             liftable = false;
-            //vrtkInteractable.isGrabbable = false;
-            //objectRigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
 
             if (matter.name=="Hologram")
             {
@@ -115,7 +91,7 @@ public class InteractableObject : MonoBehaviour {
             }
         }
     }
-    //Volume and mass calculation
+
     void MassCalculation()
     {
         boxVolume = objectTransform.localScale.x * objectTransform.localScale.y * objectTransform.localScale.z;

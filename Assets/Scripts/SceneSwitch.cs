@@ -30,6 +30,10 @@ public class SceneSwitch : MonoBehaviour {
 
     public void OnFadeComplete()
     {
+        if(StatementsManager.Instance.gameObject != null)
+        {
+            Destroy(StatementsManager.Instance.gameObject);
+        }
         SceneManager.LoadScene(levelToLoad);
     }
 

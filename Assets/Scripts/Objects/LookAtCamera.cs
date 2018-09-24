@@ -22,9 +22,12 @@ public class LookAtCamera : MonoBehaviour {
         myTransform.localScale = new Vector3(myTransform.localScale.x, myTransform.localScale.y, boxTransform.localScale.z * 2.25f);
         myTransform.position = new Vector3(boxTransform.position.x, boxTransform.position.y, boxTransform.position.z);
 
-        if (FindObjectOfType<Camera>().tag == "MainCamera")
+        if(vrCamera == null)
         {
-            vrCamera = GetComponent<Camera>();
+            if (FindObjectOfType<Camera>().tag == "MainCamera")
+            {
+                vrCamera = GetComponent<Camera>();
+            }
         }
     }
 	

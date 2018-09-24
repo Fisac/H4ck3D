@@ -18,11 +18,16 @@ public class DestroyGlass : MonoBehaviour {
 
     public void DestroyTheGlass()
     {
+        mesh.enabled = false;
+        interactableObject.GetComponent<Collider>().enabled = false;
         for (int i = 0; i <= objectNumber; i++)
         { 
             Instantiate(glassShards, transform.position, transform.rotation);
         }
+<<<<<<< HEAD
         mesh.enabled = false;
         soundManager.PlaySound("Element 1");
+=======
+>>>>>>> 2fa96868d5c0b71f924aea369d7e3f8e6f9576c5
     }
 }

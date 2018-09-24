@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,9 +8,13 @@ using UnityEngine.UI;
 public class ArmUIInteraction : MonoBehaviour {
 
     public VRTK.VRTK_UIPointer uiPointer;
+    public GameObject materialCube;
+    public Canvas selectCanvas;
     public ArmUIManager armUIManager;
     public Transform raycastOrigin;
-    public GameObject currentUIElement, selectedUIElement, selectedWorldObject;
+    [HideInInspector]
+    public GameObject currentUIElement, selectedWorldObject;
+
     public InteractionStates state;
 
     private void Awake()
@@ -36,10 +41,32 @@ public class ArmUIInteraction : MonoBehaviour {
     public void StartDraggingUI()
     {
         state = InteractionStates.Dragging;
+
+        EnableVisualEffects();
+    }
+
+    private void EnableVisualEffects()
+    {
+        if (currentUIElement.GetComponent<MonitorObject>() != null)
+        {
+            selectCanvas.gameObject.SetActive(true);
+        }
+        else if(currentUIElement.GetComponent<MonitorMatter>() != null)
+        {
+            materialCube.SetActive(true);
+        }
+    }
+
+    private void DisableVisualEffects()
+    {
+        materialCube.SetActive(false);
+        selectCanvas.gameObject.SetActive(false);
     }
 
     public void StopDraggingUI()
     {
+        DisableVisualEffects();
+
         if (state == InteractionStates.Neutral)
             return;
 
