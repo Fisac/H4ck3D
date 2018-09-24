@@ -22,15 +22,20 @@ public class ForceCheck : MonoBehaviour
 
         if (!other.transform.GetComponentInChildren<InteractableObject>() && interactableObject.force > interactableObject.matter.breakingPoint && interactableObject.matter.isDestructable)
         {
+            Debug.Break();
             destroyGlass.DestroyTheGlass();
         }
         else if (other.transform.GetComponentInChildren<InteractableObject>().force > interactableObject.matter.breakingPoint && interactableObject.matter.isDestructable)
         {
+            Debug.Break();
+
             destroyGlass.DestroyTheGlass();
         }
         else if (other.transform.GetComponentInChildren<InteractableObject>() && interactableObject.force > interactableObject.matter.breakingPoint && interactableObject.matter.isDestructable)
         {
-             destroyGlass.DestroyTheGlass();
+            Debug.Break();
+
+            destroyGlass.DestroyTheGlass();
         }
         else
         {

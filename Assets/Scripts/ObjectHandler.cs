@@ -110,7 +110,7 @@ public class ObjectHandler : MonoBehaviour {
             particleManager.push.Emit(30);
             Rigidbody body = heldObject.GetComponent<Rigidbody>();
             body.isKinematic = false;
-            body.AddForce(throwForce * transform.forward, throwForceMode);
+            body.AddForce(throwForce * raycastOrigin.transform.forward, throwForceMode);
             heldObject = null;
             pickedUp = false;
             timeLeft = repelCountdown;
@@ -128,7 +128,7 @@ public class ObjectHandler : MonoBehaviour {
             particleManager.drop.Emit(15);
             Rigidbody body = heldObject.GetComponent<Rigidbody>();
             body.isKinematic = false;
-            body.AddForce(dropForce * transform.forward, throwForceMode);
+            body.AddForce(dropForce * raycastOrigin.forward, throwForceMode);
             heldObject = null;
             pickedUp = false;
         }
