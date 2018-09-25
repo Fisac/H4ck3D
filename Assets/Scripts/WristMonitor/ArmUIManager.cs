@@ -18,6 +18,11 @@ public class ArmUIManager : MonoBehaviour {
             Debug.LogError("CHECK SMALL AND BIG COLLIDER ON ARMUIMANAGER!");
     }
 
+    private void Start()
+    {
+        DisableMonitor();
+    }
+
     private void ActivateMonitor()
     {
         armUICanvas.gameObject.SetActive(true);
