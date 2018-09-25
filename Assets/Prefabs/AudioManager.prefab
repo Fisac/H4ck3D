@@ -51,28 +51,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb1fd80abd613948881e423383a86b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
   sounds:
   - name: Drop
     clip: {fileID: 8300000, guid: c120df1ca6459cd4da6a87aa37c3825e, type: 3}
+    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 1
     pitch: 1
+    StartTime: 1.2
     loop: 0
     source: {fileID: 0}
   - name: Glass
     clip: {fileID: 8300000, guid: aacedef88b87c044eb6c85982af70e7b, type: 3}
+    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 1
     pitch: 1
+    StartTime: 0.8
     loop: 0
     source: {fileID: 0}
   - name: Pull
     clip: {fileID: 8300000, guid: 8534e44c5a3bb5142ba717da6a7e9b3f, type: 3}
+    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 1
     pitch: 1
+    StartTime: 0
     loop: 0
     source: {fileID: 0}
   - name: Push
     clip: {fileID: 8300000, guid: 86e0042a2ad25d9419b39cebc9b60216, type: 3}
+    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 1
     pitch: 1
+    StartTime: 0
     loop: 0
     source: {fileID: 0}
