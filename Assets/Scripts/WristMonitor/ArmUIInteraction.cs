@@ -100,7 +100,7 @@ public class ArmUIInteraction : MonoBehaviour {
             else if (interactableObject != null && monitorMatter != null)
             {
                 interactableObject.UpdateMatter(monitorMatter.matter);
-                
+                monitorMatter.gameObject.SetActive(false);
             }
         }
     }

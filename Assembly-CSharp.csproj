@@ -89,11 +89,13 @@
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\TestFlipMaterial.cs" />
+    <Compile Include="Assets\Scripts\TestSound.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\ArmUIInteraction.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\ArmUIManager.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\InteractionStates.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\MonitorObject.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\MonitorStatement.cs" />
+    <Compile Include="Assets\Scripts\WristMonitor\SelectCanvasLookAt.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\WristMonitor.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
