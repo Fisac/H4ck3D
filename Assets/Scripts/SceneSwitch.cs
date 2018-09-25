@@ -24,7 +24,19 @@ public class SceneSwitch : MonoBehaviour {
     
     public void FadeToNextLevel()
     {
-        LevelFader(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings)
+        {
+            LoadMainMenu();
+        }
+        else
+        {
+            LevelFader(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+    public void LoadMainMenu()
+    {
+        LevelFader(0);
     }
 
     public void ResetLevel()
