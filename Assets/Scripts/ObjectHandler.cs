@@ -77,6 +77,7 @@ public class ObjectHandler : MonoBehaviour {
     {
         particleManager.pull.gameObject.SetActive(true);
         particleManager.pull.Play();
+        FindObjectOfType<SoundManager>().PlaySound("Pull");
 
         if (!pickedUp)
         {
@@ -114,6 +115,7 @@ public class ObjectHandler : MonoBehaviour {
             heldObject = null;
             pickedUp = false;
             timeLeft = repelCountdown;
+            FindObjectOfType<SoundManager>().PlaySound("Push");
         }
     }
 
@@ -131,6 +133,7 @@ public class ObjectHandler : MonoBehaviour {
             body.AddForce(dropForce * raycastOrigin.forward, throwForceMode);
             heldObject = null;
             pickedUp = false;
+            FindObjectOfType<SoundManager>().PlaySound("Drop");
         }
     }
 }
