@@ -52,9 +52,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Drop
+    clip: {fileID: 8300000, guid: c120df1ca6459cd4da6a87aa37c3825e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Glass
+    clip: {fileID: 8300000, guid: aacedef88b87c044eb6c85982af70e7b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pull
+    clip: {fileID: 8300000, guid: 8534e44c5a3bb5142ba717da6a7e9b3f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Push
+    clip: {fileID: 8300000, guid: 86e0042a2ad25d9419b39cebc9b60216, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}

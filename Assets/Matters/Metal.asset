@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Metal
   m_EditorClassIdentifier: 
   name: Metal
-  density: 400
+  density: 17
   frictionMultiplier: 2
   isDestructable: 0
   isPhysical: 1

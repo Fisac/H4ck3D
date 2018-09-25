@@ -19,6 +19,9 @@ public class DestroyGlass : MonoBehaviour {
     public void DestroyTheGlass()
     {
         mesh.enabled = false;
+        if(interactableObject == null)
+            interactableObject = GetComponent<InteractableObject>();
+
         interactableObject.GetComponent<Collider>().enabled = false;
         for (int i = 0; i <= objectNumber; i++)
         { 
@@ -26,7 +29,7 @@ public class DestroyGlass : MonoBehaviour {
         }
 
         mesh.enabled = false;
-        soundManager.PlaySound("Element 1");
+        FindObjectOfType<SoundManager>().PlaySound("Glass");
 
     }
 }
