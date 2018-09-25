@@ -1730,12 +1730,12 @@ Prefab:
     - target: {fileID: 114478019013268460, guid: ecd48f5bf7d8a5c4494ce8f4589c92a4,
         type: 2}
       propertyPath: m_Options.m_Options.Array.data[2].m_Text
-      value: Airborne
+      value: Hologram
       objectReference: {fileID: 0}
     - target: {fileID: 114478019013268460, guid: ecd48f5bf7d8a5c4494ce8f4589c92a4,
         type: 2}
       propertyPath: m_Options.m_Options.Array.data[3].m_Text
-      value: Metal
+      value: Hologram
       objectReference: {fileID: 0}
     - target: {fileID: 114478019013268460, guid: ecd48f5bf7d8a5c4494ce8f4589c92a4,
         type: 2}
