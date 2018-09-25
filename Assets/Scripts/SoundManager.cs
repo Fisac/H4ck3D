@@ -32,6 +32,8 @@ public class SoundManager : MonoBehaviour {
             s.source.pitch = s.pitch;
 
             s.source.loop = s.loop;
+
+            s.source.time = s.StartTime;
         }    
     }
 

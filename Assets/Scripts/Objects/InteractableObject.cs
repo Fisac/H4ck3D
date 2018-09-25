@@ -22,7 +22,7 @@ public class InteractableObject : MonoBehaviour {
     public bool liftable;
     public float mass;
     public float boxVolume;
-    public const float maximumLiftWeight = 7;
+    public const float maximumLiftWeight = 1;
 
     public float force;
     public float highestVelocity;
