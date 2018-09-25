@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\TestFlipMaterial.cs" />
+    <Compile Include="Assets\Scripts\TestSound.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\ArmUIInteraction.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\ArmUIManager.cs" />
     <Compile Include="Assets\Scripts\WristMonitor\InteractionStates.cs" />
