@@ -6,6 +6,7 @@
 		_SpeedMax("Speed Max", range(0, 30.)) = 20.
 		_SpeedMin("Speed Min", range(0, 10.)) = 2.
 		_Density("Density", range(0, 30.)) = 5.
+		_TintColor("TintColor", Color) = (1,1,1,1)
 	}
 	SubShader
 	{
@@ -129,7 +130,9 @@
 
 			float _Grid; 
 			float _SpeedMax; 
-			float _SpeedMin; 
+			float _SpeedMin;
+
+			uniform float4 _TintColor; 
 
 			fixed4 frag(v2f_img i) : SV_Target
 			{
@@ -139,7 +142,8 @@
 				ipos.y += floor(_Time.y * max(_SpeedMin, _SpeedMax * noise(ipos.x)));
 				float charNum = noise(ipos);
 				float val = char(fpos, (20. + _Density) * charNum); 
-				return fixed4(0, val, 0, 1.0); 
+				//return fixed4(0, val, 0, 1.0); 
+				return _TintColor * val; 
 			}
 
 			ENDCG
