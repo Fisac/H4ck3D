@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    public SceneSwitch sceneSwitch;
     Transform doorTransform;
 
     float doorStart;
     float doorStop;
 
     float lerpTime = 0f;
+
+    private void Awake()
+    {
+        if(sceneSwitch == null)
+        {
+            sceneSwitch = FindObjectOfType<SceneSwitch>();
+        }
+    }
 
     void Start()
     {
@@ -26,6 +35,8 @@ public class Door : MonoBehaviour
 
         StartCoroutine(DisableMeshRenderer());
         GetComponent<MeshRenderer>().enabled = false;
+
+        sceneSwitch.FadeToNextLevel();
     }
 
     IEnumerator DisableMeshRenderer()

@@ -15,11 +15,33 @@ public class SceneSwitch : MonoBehaviour {
         {
             FadeToNextLevel();
         }
-	}
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            ResetLevel();
+        }
+    }
     
     public void FadeToNextLevel()
     {
-        LevelFader(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings)
+        {
+            LoadMainMenu();
+        }
+        else
+        {
+            LevelFader(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+    public void LoadMainMenu()
+    {
+        LevelFader(0);
+    }
+
+    public void ResetLevel()
+    {
+        LevelFader(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LevelFader(int levelIndex)
@@ -30,7 +52,7 @@ public class SceneSwitch : MonoBehaviour {
 
     public void OnFadeComplete()
     {
-        if(StatementsManager.Instance.gameObject != null)
+        if(StatementsManager.Instance != null && StatementsManager.Instance.gameObject != null)
         {
             Destroy(StatementsManager.Instance.gameObject);
         }
