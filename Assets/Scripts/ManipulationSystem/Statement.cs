@@ -24,6 +24,12 @@ public class Statement : MonoBehaviour {
             ApplySelfToManipulatable();
     }
 
+    private void Update()
+    {
+        if (manipulatable != null && manipulatable.statement != this)
+            ApplySelfToManipulatable();
+    }
+
     public void ApplySelfToManipulatable()
     {
         manipulatable.statement = this;
