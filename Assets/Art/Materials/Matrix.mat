@@ -25,4 +25,4 @@ Material:
     - _SpeedMin: 2
     m_Colors:
     - Color_8E8C707B: {r: 0.5283022, g: 11.90812, b: 16, a: 0}
-    - _TintColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TintColor: {r: 0.4, g: 0.7058824, b: 0, a: 1}
