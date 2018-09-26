@@ -27,6 +27,18 @@ public class MonitorStatement : MonoBehaviour {
     private void Awake()
     {
         monitorObject.statement = statement;
+        MatterSetup();
+    }
+
+    private void MatterSetup()
+    {
+        if(statement.matter != null)
+        {
+            string matterName = statement.matter.name;
+
+            statement.matter = new Matter();
+            statement.matter.name = matterName;
+        }
     }
 
     public void UpdateConditions()
