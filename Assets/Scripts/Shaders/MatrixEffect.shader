@@ -143,7 +143,8 @@
 				float charNum = noise(ipos);
 				float val = char(fpos, (20. + _Density) * charNum); 
 				//return fixed4(0, val, 0, 1.0); 
-				return _TintColor * val; 
+				//return _TintColor * val; 
+				return val * _TintColor; 
 			}
 
 			ENDCG

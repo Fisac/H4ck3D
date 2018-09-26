@@ -8,7 +8,7 @@
 		_GridOffsetZ("Grid Offset Z", Float) = 0
 		_GridColor("Grid Color", Color) = (0.5, 1.0, 1.0, 1.0)
 		_BaseColor("Base Color", Color) = (0.0, 0.0, 0.0, 0.0)
-		_Emission("Intensity", Range(0,5)) = 1
+		//_Emission("Intensity", Range(0,5)) = 1
 	}
 
 		SubShader{
@@ -54,7 +54,8 @@
 				if (frac((input.worldPos.x + _GridOffsetX) / _GridSpacingX) < (_GridThickness / _GridSpacingX)
 				|| frac((input.worldPos.z + _GridOffsetZ) / _GridSpacingZ) < (_GridThickness / _GridSpacingZ))
 				{
-					return _GridColor * _Emission; 
+					//return _GridColor * _Emission; 
+					return _GridColor; 
 				}
 				else {
 
