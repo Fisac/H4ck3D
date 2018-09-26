@@ -66,8 +66,11 @@
     <Compile Include="Assets\Scripts\Common\Singleton.cs" />
     <Compile Include="Assets\Scripts\ControllerScripts\TestUIScript.cs" />
     <Compile Include="Assets\Scripts\DestroyGlass.cs" />
+    <Compile Include="Assets\Scripts\EditorScripts\GameStateManagerEditor.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\MaterialTestEditor.cs" />
     <Compile Include="Assets\Scripts\ForceCheck.cs" />
+    <Compile Include="Assets\Scripts\GameStateManager.cs" />
+    <Compile Include="Assets\Scripts\MainMenuScript.cs" />
     <Compile Include="Assets\Scripts\ManipulationSystem\Conditions.cs" />
     <Compile Include="Assets\Scripts\ManipulationSystem\DestructibleObject.cs" />
     <Compile Include="Assets\Scripts\ManipulationSystem\Manipulatable.cs" />
@@ -84,6 +87,7 @@
     <Compile Include="Assets\Scripts\Objects\LocalScaling.cs" />
     <Compile Include="Assets\Scripts\Objects\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\Objects\UIPopup.cs" />
+    <Compile Include="Assets\Scripts\OptionsScript.cs" />
     <Compile Include="Assets\Scripts\ParticleManager.cs" />
     <Compile Include="Assets\Scripts\SceneSwitch.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
