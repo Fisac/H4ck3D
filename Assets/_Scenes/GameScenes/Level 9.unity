@@ -8518,7 +8518,7 @@ GameObject:
   - component: {fileID: 446256600}
   - component: {fileID: 446256599}
   m_Layer: 0
-  m_Name: NorthWall (4)
+  m_Name: Ceiling (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21640,7 +21640,7 @@ GameObject:
   - component: {fileID: 1345767854}
   - component: {fileID: 1345767853}
   m_Layer: 0
-  m_Name: NorthWall (2)
+  m_Name: Ceiling (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32367,7 +32367,7 @@ GameObject:
   - component: {fileID: 1946549546}
   - component: {fileID: 1946549545}
   m_Layer: 0
-  m_Name: NorthWall (5)
+  m_Name: Ceiling (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33337,7 +33337,7 @@ GameObject:
   - component: {fileID: 2072937417}
   - component: {fileID: 2072937416}
   m_Layer: 0
-  m_Name: NorthWall (3)
+  m_Name: Ceiling (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
