@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Matrix
+  m_Name: Matrix Door
   m_Shader: {fileID: 4800000, guid: b7e744476afcadc45b5cffbe6c7d6e86, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     m_TexEnvs: []
     m_Floats:
     - _Density: 2
-    - _Grid: 40
+    - _Grid: 10
     - _SpeedMax: 20
     - _SpeedMin: 2
     m_Colors:
