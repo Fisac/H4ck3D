@@ -69,6 +69,7 @@ public class InteractableObject : MonoBehaviour {
 
         if (mass > maximumLiftWeight)
         {
+            objectRigidbody.constraints = RigidbodyConstraints.FreezeAll;
             liftable = false;
         }
         else
@@ -82,10 +83,12 @@ public class InteractableObject : MonoBehaviour {
 
             if (matter.name=="Hologram")
             {
-                objectCollider.isTrigger = true;
+                objectRigidbody.constraints = RigidbodyConstraints.FreezeAll;
+                objectCollider.enabled = false;
             }
             else
             {
+                objectRigidbody.constraints = RigidbodyConstraints.FreezeAll;
                 objectCollider.enabled = !objectCollider.enabled;
                 objectCollider.isTrigger = false;
             }
