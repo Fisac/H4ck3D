@@ -40,6 +40,11 @@ public class LookAtCamera : MonoBehaviour {
         UpdateText();
     }
 
+    private void LateUpdate()
+    {
+        transform.position = boxTransform.position;
+    }
+
     void UpdateText()
     {
         popupMatter.text = interactableObject.matter.name;
