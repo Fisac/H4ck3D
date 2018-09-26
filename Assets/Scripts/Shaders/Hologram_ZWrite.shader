@@ -16,7 +16,7 @@
 	{
 		"RenderPipeline" = "HDRenderPipeline"
 		"RenderType" = "Transparent"
-		"Queue" = "Transparent"
+		"Queue" = "Transparent + 4000"
 	}
 		Pass
 	{
@@ -30,7 +30,7 @@
 
 		ZTest LEqual
 
-		ZWrite On
+		ZWrite Off
 
 		LOD 300
 
