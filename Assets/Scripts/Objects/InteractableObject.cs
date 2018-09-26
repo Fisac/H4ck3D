@@ -11,7 +11,9 @@ public class InteractableObject : MonoBehaviour {
     DestroyGlass destroyGlass;
     Manipulatable manipulatable;
 
-    public List<Matter> matters;
+    public Material redGlass;
+    public Material redMetal;
+    public Material redDefault;
 
     Collider objectCollider;
     Rigidbody objectRigidbody;
@@ -63,14 +65,25 @@ public class InteractableObject : MonoBehaviour {
         objectRigidbody = GetComponent<Rigidbody>();
 
         objectCollider.material = matter.physicMaterial;
+        //Add if() and check if object with the matter is NOT liftable, then use a public material(red glass, red default, red metal) saved in this script
+        if (true)
+        {
+
+        }
+        else
+        {
+        }
         myRenderer.material = matter.matterMaterial;
 
         MassCalculation();
 
         if (mass > maximumLiftWeight)
         {
-            objectRigidbody.constraints = RigidbodyConstraints.FreezeAll;
             liftable = false;
+            if (boxVolume >= 1f)
+            {
+                objectRigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            }
         }
         else
         {
