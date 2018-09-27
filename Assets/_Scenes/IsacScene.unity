@@ -1641,34 +1641,6 @@ Prefab:
       propertyPath: vrCamera
       value: 
       objectReference: {fileID: 2100267356}
-    - target: {fileID: 4192168790126364, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4192168790126364, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4192168790126364, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114085026586283152, guid: ab5443fa4bd9e294883d5f9e0e56de23,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114968601318155028, guid: ab5443fa4bd9e294883d5f9e0e56de23,
-        type: 2}
-      propertyPath: matter
-      value: 
-      objectReference: {fileID: 11400000, guid: 925c4c145635b62408a05fdc2bba52c1,
-        type: 2}
-    - target: {fileID: 114968601318155028, guid: ab5443fa4bd9e294883d5f9e0e56de23,
-        type: 2}
-      propertyPath: maximumLiftWeight
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
   m_IsPrefabAsset: 0
