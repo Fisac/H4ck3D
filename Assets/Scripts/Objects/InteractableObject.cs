@@ -65,6 +65,8 @@ public class InteractableObject : MonoBehaviour {
         objectRigidbody = GetComponent<Rigidbody>();
 
         objectCollider.material = matter.physicMaterial;
+        myRenderer.material = matter.matterMaterial;
+
         MassCalculation();
 
         if (mass > maximumLiftWeight)
@@ -96,26 +98,6 @@ public class InteractableObject : MonoBehaviour {
                 objectCollider.isTrigger = false;
             }
         }
-
-        //Add if() and check if object with the matter is NOT liftable, then use a public material(red glass, red default, red metal) saved in this script
-        //if (matter.name=="Glass" && !liftable)
-        //{
-        //    myRenderer.material = redGlass;
-        //}
-        //else if (matter.name == "Default" && !liftable)
-        //{
-        //    myRenderer.material = redDefault;
-        //}
-        //else if (matter.name == "Metal" && !liftable)
-        //{
-        //    myRenderer.material = redMetal;
-        //}
-        //else
-        //{
-        //    myRenderer.material = matter.matterMaterial;
-        //}
-        myRenderer.material = matter.matterMaterial;
-
     }
 
     void MassCalculation()
