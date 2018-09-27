@@ -3,7 +3,12 @@ guid: a76362ee3568a4944aeddcd8c9ce3248
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - matter: {instanceID: 0}
+  - redGlass: {fileID: 2100000, guid: d93c0707d46388a458c79f74e04f9c0f, type: 2}
+  - redMetal: {fileID: 2100000, guid: fae773c757d52884f8d5154935c223e5, type: 2}
+  - redDefault: {fileID: 2100000, guid: 4c2535fad9ec4b74db8f7c58fb938293, type: 2}
+  - thisGameObject: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -17,5 +17,5 @@ MonoBehaviour:
   isDestructable: 1
   isPhysical: 1
   breakingPoint: 75
-  matterMaterial: {fileID: 2100000, guid: 2fc2c31276f37d344b84fbd5fb35408a, type: 2}
+  matterMaterial: {fileID: 2100000, guid: b4f15dbd47a072e42a8c444fc6172c1e, type: 2}
   physicMaterial: {fileID: 13400000, guid: e3e26a5bad9dd9a41a73e127f58da3b3, type: 2}

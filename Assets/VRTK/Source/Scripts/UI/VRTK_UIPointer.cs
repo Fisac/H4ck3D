@@ -251,6 +251,7 @@ namespace VRTK
             if (UIPointerElementClick != null)
             {
                 UIPointerElementClick(this, e);
+                FindObjectOfType<SoundManager>().PlaySound("ButtonClick");
             }
         }
 

@@ -56,6 +56,7 @@ public class InteractableObject : MonoBehaviour {
     {
         this.matter = matter;
         UpdateProperties();
+        FindObjectOfType<SoundManager>().PlaySound("MatterSwitch");
     }
 
     void UpdateProperties()
@@ -65,14 +66,6 @@ public class InteractableObject : MonoBehaviour {
         objectRigidbody = GetComponent<Rigidbody>();
 
         objectCollider.material = matter.physicMaterial;
-        //Add if() and check if object with the matter is NOT liftable, then use a public material(red glass, red default, red metal) saved in this script
-        if (true)
-        {
-
-        }
-        else
-        {
-        }
         myRenderer.material = matter.matterMaterial;
 
         MassCalculation();
