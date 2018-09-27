@@ -90,7 +90,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -714,7 +714,7 @@ Prefab:
         type: 2}
       propertyPath: matter
       value: 
-      objectReference: {fileID: 11400000, guid: 925c4c145635b62408a05fdc2bba52c1,
+      objectReference: {fileID: 11400000, guid: 091c41536ff0edc4f8a46b1a95018840,
         type: 2}
     - target: {fileID: 4192168790126364, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
       propertyPath: m_LocalScale.x
@@ -752,6 +752,11 @@ Prefab:
         type: 2}
       propertyPath: canvasOffset
       value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 224471469049129530, guid: ab5443fa4bd9e294883d5f9e0e56de23,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
@@ -1598,6 +1603,11 @@ Prefab:
     - target: {fileID: 1976806697270280, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
       propertyPath: m_Name
       value: InteractableObjectParent (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 224471469049129530, guid: ab5443fa4bd9e294883d5f9e0e56de23,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
@@ -5157,6 +5167,11 @@ Prefab:
       propertyPath: m_Name
       value: InteractableObjectParent (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 224471469049129530, guid: ab5443fa4bd9e294883d5f9e0e56de23,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
   m_IsPrefabAsset: 0
@@ -7643,6 +7658,11 @@ Prefab:
       propertyPath: m_Name
       value: InteractableObjectParent (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 224471469049129530, guid: ab5443fa4bd9e294883d5f9e0e56de23,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
   m_IsPrefabAsset: 0
@@ -8273,6 +8293,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114087637887458268, guid: ecd48f5bf7d8a5c4494ce8f4589c92a4,
+        type: 2}
+      propertyPath: matter
+      value: 
+      objectReference: {fileID: 11400000, guid: d852cfdfb36ff5b4f875eb4e5ae87743,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecd48f5bf7d8a5c4494ce8f4589c92a4, type: 2}
   m_IsPrefabAsset: 0
@@ -9500,6 +9526,10 @@ Prefab:
     - target: {fileID: 4192168790126364, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021455362222658, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
@@ -13106,6 +13136,11 @@ Prefab:
     - target: {fileID: 1976806697270280, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
       propertyPath: m_Name
       value: InteractableObjectParent (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 224471469049129530, guid: ab5443fa4bd9e294883d5f9e0e56de23,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}

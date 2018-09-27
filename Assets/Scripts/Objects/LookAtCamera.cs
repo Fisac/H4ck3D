@@ -15,13 +15,10 @@ public class LookAtCamera : MonoBehaviour {
     public Text popupName;
     public Text popupMatter;
 
-    public float canvasOffset = 2.25f;
-
     // Use this for initialization
     void Start () {
         myTransform = GetComponent<Transform>();
-
-        myTransform.localScale = new Vector3(myTransform.localScale.x, myTransform.localScale.y, boxTransform.localScale.z * canvasOffset);
+        
         myTransform.position = new Vector3(boxTransform.position.x, boxTransform.position.y, boxTransform.position.z);
 
         if(vrCamera == null)
