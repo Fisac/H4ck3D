@@ -88,6 +88,22 @@ MonoBehaviour:
   - name: MatterSwitch
     clip: {fileID: 8300000, guid: 627678f88c8d84d46856056c4067e110, type: 3}
     mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    volume: 0.6
+    pitch: 1.8
+    StartTime: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: ArmUIOn
+    clip: {fileID: 8300000, guid: 794fa15190f56954cbe7a6a790fe9840, type: 3}
+    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    volume: 1
+    pitch: 1
+    StartTime: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: 1152d6c3a4ab7934da143a4f973b0a3b, type: 3}
+    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 1
     pitch: 1
     StartTime: 0
