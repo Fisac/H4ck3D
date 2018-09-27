@@ -2461,6 +2461,12 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114085026586283152, guid: ab5443fa4bd9e294883d5f9e0e56de23,
+        type: 2}
+      propertyPath: glassShards
+      value: 
+      objectReference: {fileID: 1744831886945044, guid: d1cc32be9fcd7e449bd79b51dc433bf0,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
   m_IsPrefabAsset: 0
