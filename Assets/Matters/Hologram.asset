@@ -15,7 +15,7 @@ MonoBehaviour:
   density: 0
   frictionMultiplier: 1
   isDestructable: 0
-  isPhysical: 1
+  isPhysical: 0
   breakingPoint: 0
   matterMaterial: {fileID: 2100000, guid: f0dc70250a24d7b4ba82e7cecb25d474, type: 2}
   physicMaterial: {fileID: 13400000, guid: 0288da0a057aeac439fd6e354ae557c6, type: 2}
