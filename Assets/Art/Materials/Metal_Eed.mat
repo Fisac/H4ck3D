@@ -6,22 +6,18 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Test Hologram
-  m_Shader: {fileID: 4800000, guid: 51b1295091312f74996529b40bc5d0f8, type: 3}
+  m_Name: Metal_Eed
+  m_Shader: {fileID: 4800000, guid: 2d6e33a92f6bd7a469946ec377e16840, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 4000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_42C67CC:
-        m_Texture: {fileID: 2800000, guid: 7544d63e60103c440b9c16044fd27dc7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -58,8 +54,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_BF018FCD_Texture:
-        m_Texture: {fileID: 2800000, guid: b3aa88fc34fb25f41bf9e4ba48414083, type: 3}
+    - _SampleCubemap_5FC84C74_Cube:
+        m_Texture: {fileID: 8900000, guid: 481736b2972e2c842822c864d706f17a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_223435D6_Texture:
+        m_Texture: {fileID: 2800000, guid: 15434a03d26557c4a9c1971654212ea8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -67,7 +67,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_285C77C0: 0.1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -75,6 +74,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _EdgeThickness: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -89,10 +89,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_219146F1: {r: 0.5176471, g: 0.9137255, b: 0, a: 1}
-    - Color_96DBF111: {r: 0.3137255, g: 0.5529412, b: 0, a: 0}
-    - Vector2_547A76F1: {r: 1, g: 3, b: 0, a: 0}
-    - Vector3_659BFEB9: {r: 1, g: 3, b: 3, a: 0}
+    - Color_7956022D: {r: 0.8509804, g: 0, b: 0.35686275, a: 1}
+    - Color_B3330A77: {r: 0.25490198, g: 0.2509804, b: 0.2509804, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _EdgeColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
