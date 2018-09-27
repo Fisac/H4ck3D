@@ -2671,7 +2671,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1107154010517284, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
       propertyPath: m_Name
-      value: wall.South.fragment
+      value: fragment.South
       objectReference: {fileID: 0}
     - target: {fileID: 4744098154955188, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -7976,7 +7976,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1107154010517284, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
       propertyPath: m_Name
-      value: wall.East.fragment
+      value: framgment.East
       objectReference: {fileID: 0}
     - target: {fileID: 4744098154955188, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -9830,7 +9830,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1107154010517284, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
       propertyPath: m_Name
-      value: cube.Small.hidden
+      value: cube.Isac
       objectReference: {fileID: 0}
     - target: {fileID: 4744098154955188, guid: ab5443fa4bd9e294883d5f9e0e56de23, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
