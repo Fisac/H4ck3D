@@ -56,6 +56,7 @@ public class InteractableObject : MonoBehaviour {
     {
         this.matter = matter;
         UpdateProperties();
+        FindObjectOfType<SoundManager>().PlaySound("MatterSwitch");
     }
 
     void UpdateProperties()

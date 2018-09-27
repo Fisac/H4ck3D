@@ -45,6 +45,7 @@ public class ArmUIManager : MonoBehaviour {
         if (other.tag=="MainCamera")
         {
             ActivateMonitor();
+            FindObjectOfType<SoundManager>().PlaySound("ArmUIOn");
         }
     }
 
