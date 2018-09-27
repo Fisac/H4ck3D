@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AttractObjects.cs" />
+    <Compile Include="Assets\ProjectUI.cs" />
     <Compile Include="Assets\ProvScript.cs" />
     <Compile Include="Assets\Scripts\Common\Singleton.cs" />
     <Compile Include="Assets\Scripts\ControllerScripts\TestUIScript.cs" />
