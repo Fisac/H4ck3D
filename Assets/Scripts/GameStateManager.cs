@@ -25,6 +25,15 @@ public class GameStateManager : MonoBehaviour {
         }
     }
 
+    private void Start()
+    {
+        if(currentScene.buildIndex == 1)
+        {
+            FindObjectOfType<SoundManager>().PlaySound("BushWeek");
+        }
+
+    }
+
     public void SaveCurrentLevel()
     {
         PlayerPrefs.SetString("LevelToLoad", currentScene.name);

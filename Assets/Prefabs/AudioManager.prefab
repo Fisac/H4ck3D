@@ -109,3 +109,19 @@ MonoBehaviour:
     StartTime: 0
     loop: 0
     source: {fileID: 0}
+  - name: SpaceLoop
+    clip: {fileID: 8300000, guid: d29d635444c264c4b9cc96b3076cc116, type: 3}
+    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    volume: 0.7
+    pitch: 1
+    StartTime: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: BushWeek
+    clip: {fileID: 8300000, guid: 7684d54442345e94cb97df45b3486f1e, type: 3}
+    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    volume: 0.705
+    pitch: 1
+    StartTime: 0
+    loop: 1
+    source: {fileID: 0}

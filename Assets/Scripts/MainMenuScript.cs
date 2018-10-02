@@ -14,7 +14,8 @@ public class MainMenuScript : MonoBehaviour {
         {
             sceneSwitch = gameObject.GetComponent<SceneSwitch>();
         }
-	}
+        FindObjectOfType<SoundManager>().PlaySound("BushWeek");
+    }
 
 
     public void StartNewGame()
