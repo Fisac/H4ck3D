@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -970,6 +970,16 @@ Prefab:
     - target: {fileID: 4936440366654106, guid: c57b77a67f4a71b48b9ad8cefadc5a57, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114507090352040132, guid: c57b77a67f4a71b48b9ad8cefadc5a57,
+        type: 2}
+      propertyPath: sounds.Array.data[8].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114507090352040132, guid: c57b77a67f4a71b48b9ad8cefadc5a57,
+        type: 2}
+      propertyPath: sounds.Array.data[7].volume
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c57b77a67f4a71b48b9ad8cefadc5a57, type: 2}
@@ -3148,32 +3158,32 @@ Prefab:
         type: 2}
       propertyPath: actualBoundaries
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1355441868}
     - target: {fileID: 114176124593212466, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
         type: 2}
       propertyPath: actualHeadset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1355441867}
     - target: {fileID: 114176124593212466, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
         type: 2}
       propertyPath: actualLeftController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1355441866}
     - target: {fileID: 114176124593212466, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
         type: 2}
       propertyPath: actualRightController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1355441865}
     - target: {fileID: 114176124593212466, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
         type: 2}
       propertyPath: modelAliasLeftController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1355441864}
     - target: {fileID: 114176124593212466, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
         type: 2}
       propertyPath: modelAliasRightController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1355441863}
     - target: {fileID: 1426404234871802, guid: 04cb25cd00dc2784b98bdb658ee87ab3, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -3193,6 +3203,36 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04cb25cd00dc2784b98bdb658ee87ab3, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1355441863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1415728186859592, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1355441862}
+--- !u!1 &1355441864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1660297488051996, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1355441862}
+--- !u!1 &1355441865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1997813769606406, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1355441862}
+--- !u!1 &1355441866 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1930079986968762, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1355441862}
+--- !u!1 &1355441867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1336889701706330, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1355441862}
+--- !u!1 &1355441868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1537569111783444, guid: 04cb25cd00dc2784b98bdb658ee87ab3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1355441862}
 --- !u!1 &1484643283
 GameObject:
   m_ObjectHideFlags: 0
