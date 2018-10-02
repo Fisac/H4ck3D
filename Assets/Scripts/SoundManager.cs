@@ -59,6 +59,6 @@ public class SoundManager : MonoBehaviour {
             Debug.LogWarning("DID NOT FIND " + name);
             return;
         }
-        s.source.Stop();
+        s.source.Pause();
     }
 }

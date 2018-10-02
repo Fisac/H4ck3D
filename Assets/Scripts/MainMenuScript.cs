@@ -14,12 +14,13 @@ public class MainMenuScript : MonoBehaviour {
         {
             sceneSwitch = gameObject.GetComponent<SceneSwitch>();
         }
-        FindObjectOfType<SoundManager>().PlaySound("BushWeek");
+        FindObjectOfType<SoundManager>().PlaySound("SpaceLoop");
     }
 
 
     public void StartNewGame()
     {
+
         Debug.Log("Clicked");
         sceneSwitch.FadeToNextLevel();
     }

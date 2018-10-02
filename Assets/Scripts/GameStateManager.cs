@@ -25,14 +25,15 @@ public class GameStateManager : MonoBehaviour {
         }
     }
 
-    private void Start()
-    {
-        if(currentScene.buildIndex == 1)
-        {
-            FindObjectOfType<SoundManager>().PlaySound("BushWeek");
-        }
+    //private void Start()
+    //{
+    //    if (SceneManager.GetActiveScene().buildIndex == 1)
+    //    {
+    //        Debug.Log(SceneManager.GetActiveScene().buildIndex);
 
-    }
+    //    }
+
+    //}
 
     public void SaveCurrentLevel()
     {
