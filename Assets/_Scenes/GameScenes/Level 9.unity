@@ -498,7 +498,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 127123486}
   m_OnClick:
     m_PersistentCalls:
@@ -2703,7 +2703,7 @@ RectTransform:
   m_Father: {fileID: 1127892105}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.00000011920929}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.9999999}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -3657,7 +3657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 37.1}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &871081573
@@ -5167,6 +5167,11 @@ Prefab:
     - target: {fileID: 1066862562731408, guid: ecd48f5bf7d8a5c4494ce8f4589c92a4, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114402885469595936, guid: ecd48f5bf7d8a5c4494ce8f4589c92a4,
+        type: 2}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecd48f5bf7d8a5c4494ce8f4589c92a4, type: 2}
@@ -7684,7 +7689,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 595947145}
   m_HandleRect: {fileID: 595947144}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8905,7 +8910,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2136736918}
   m_OnClick:
     m_PersistentCalls:

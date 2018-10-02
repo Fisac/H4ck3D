@@ -72,7 +72,7 @@ MonoBehaviour:
   - name: Pull
     clip: {fileID: 8300000, guid: 8534e44c5a3bb5142ba717da6a7e9b3f, type: 3}
     mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
-    volume: 0.5
+    volume: 0.25
     pitch: 1
     StartTime: 0
     loop: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   - name: SpaceLoop
     clip: {fileID: 8300000, guid: d29d635444c264c4b9cc96b3076cc116, type: 3}
     mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
-    volume: 0.5
+    volume: 0.3
     pitch: 1
     StartTime: 0
     loop: 1
@@ -120,8 +120,16 @@ MonoBehaviour:
   - name: BushWeek
     clip: {fileID: 8300000, guid: 7684d54442345e94cb97df45b3486f1e, type: 3}
     mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
-    volume: 0.5
+    volume: 0.3
     pitch: 1
     StartTime: 0
     loop: 1
+    source: {fileID: 0}
+  - name: Win
+    clip: {fileID: 8300000, guid: 051cfaad4a8ba9c4eaec969d71f6cbe9, type: 3}
+    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    volume: 1
+    pitch: 1
+    StartTime: 0
+    loop: 0
     source: {fileID: 0}

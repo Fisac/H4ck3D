@@ -18,7 +18,9 @@ public class StatementsManager : Singleton<StatementsManager> {
         }
 
         if (levelCompleted)
+        {
             door.OpenDoor();
+        }
 
     }
 

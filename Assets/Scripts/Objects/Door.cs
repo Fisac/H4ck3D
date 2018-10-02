@@ -30,6 +30,8 @@ public class Door : MonoBehaviour
 
     public void OpenDoor()
     {
+        FindObjectOfType<SoundManager>().PlaySound("Win");
+
         lerpTime += 0.5f * Time.deltaTime;
         doorTransform.position = new Vector3(doorTransform.position.x, doorTransform.position.y, Mathf.Lerp(doorStart, doorStop, lerpTime));
 
