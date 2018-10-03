@@ -6,21 +6,55 @@ using UnityEngine;
 
 public class OptionsScript : MonoBehaviour {
 
-    public AudioMixer mixer;
-    public Slider volumeSlider;
+    public AudioMixer masterMixer;
+    public AudioMixerGroup effectsMixer;
+    public AudioMixerGroup musicMixer;
+
     public Dropdown graphics;
-    public float volume;
+
+    public Slider volumeSlider;
+    [Range(-50, 0)]
+    public float masterVolume;
+    public Slider effectsVolumeSlider;
+    [Range(-50, 0)]
+    public float effectsVolume;
+    public Slider musicVolumeSlider;
+    [Range(-50, 0)]
+    public float musicVolume;
+
+
+    private void Start()
+    {
+        volumeSlider.maxValue = 0;
+        volumeSlider.minValue = -50;
+
+        effectsVolumeSlider.maxValue = 0;
+        effectsVolumeSlider.minValue = -50;
+
+        musicVolumeSlider.maxValue = 0;
+        musicVolumeSlider.minValue = -50;
+    }
 
     private void Update()
     {
-        volume = volumeSlider.value;
-
-        
+        masterVolume = volumeSlider.value;
+        effectsVolume = effectsVolumeSlider.value;
+        musicVolume = musicVolumeSlider.value;
     }
 
     public void MasterVolume()
     {
-        mixer.SetFloat("MasterVol", volume);
+        masterMixer.SetFloat("MasterVol", masterVolume);
+    }
+
+    public void EffectsVolume()
+    {
+        effectsMixer.audioMixer.SetFloat("EffectsVol", effectsVolume);
+    }
+
+    public void MusicVolume()
+    {
+        musicMixer.audioMixer.SetFloat("MusicVol", musicVolume);
     }
 
     public void ChangeValue()

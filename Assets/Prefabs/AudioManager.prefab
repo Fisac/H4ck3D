@@ -55,7 +55,7 @@ MonoBehaviour:
   sounds:
   - name: Drop
     clip: {fileID: 8300000, guid: c120df1ca6459cd4da6a87aa37c3825e, type: 3}
-    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    mixer: {fileID: 243294106059327120, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 0.5
     pitch: 1
     StartTime: 1.2
@@ -63,7 +63,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Glass
     clip: {fileID: 8300000, guid: aacedef88b87c044eb6c85982af70e7b, type: 3}
-    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    mixer: {fileID: 243294106059327120, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 0.5
     pitch: 1
     StartTime: 0.8
@@ -71,7 +71,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Pull
     clip: {fileID: 8300000, guid: 8534e44c5a3bb5142ba717da6a7e9b3f, type: 3}
-    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    mixer: {fileID: 243294106059327120, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 0.25
     pitch: 1
     StartTime: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Push
     clip: {fileID: 8300000, guid: 86e0042a2ad25d9419b39cebc9b60216, type: 3}
-    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    mixer: {fileID: 243294106059327120, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 0.5
     pitch: 1
     StartTime: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MatterSwitch
     clip: {fileID: 8300000, guid: 627678f88c8d84d46856056c4067e110, type: 3}
-    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    mixer: {fileID: 243294106059327120, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 0.6
     pitch: 1.8
     StartTime: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ArmUIOn
     clip: {fileID: 8300000, guid: 794fa15190f56954cbe7a6a790fe9840, type: 3}
-    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    mixer: {fileID: 243294106059327120, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 0.5
     pitch: 1
     StartTime: 0.3
@@ -103,7 +103,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ButtonClick
     clip: {fileID: 8300000, guid: 1152d6c3a4ab7934da143a4f973b0a3b, type: 3}
-    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    mixer: {fileID: 243294106059327120, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 0.5
     pitch: 1
     StartTime: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SpaceLoop
     clip: {fileID: 8300000, guid: d29d635444c264c4b9cc96b3076cc116, type: 3}
-    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    mixer: {fileID: 24348630, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 0.3
     pitch: 1
     StartTime: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: BushWeek
     clip: {fileID: 8300000, guid: 7684d54442345e94cb97df45b3486f1e, type: 3}
-    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    mixer: {fileID: 24348630, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 0.3
     pitch: 1
     StartTime: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Win
     clip: {fileID: 8300000, guid: 051cfaad4a8ba9c4eaec969d71f6cbe9, type: 3}
-    mixer: {fileID: 24300001, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
+    mixer: {fileID: 243294106059327120, guid: 95096f29d1ddcd647ace66f3641d42f5, type: 2}
     volume: 1
     pitch: 1
     StartTime: 0
